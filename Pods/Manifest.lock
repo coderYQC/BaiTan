@@ -1,0 +1,137 @@
+PODS:
+  - Alamofire (4.9.1)
+  - AlamofireObjectMapper (5.2.1):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - AlicloudPush (1.9.8):
+    - AlicloudUT
+    - AlicloudUtils
+  - AlicloudUT (5.2.0.5):
+    - AlicloudUTDID
+  - AlicloudUTDID (1.1.0.19)
+  - AlicloudUtils (1.3.6):
+    - AlicloudUTDID
+  - BaiduMapKit (4.1.1)
+  - Cache (5.2.0)
+  - DaisyNet (0.0.9):
+    - Alamofire (>= 4.5.1)
+    - Cache (>= 5.0.0)
+  - ESTabBarController-swift (2.6.5)
+  - FDFullscreenPopGesture (1.1)
+  - IQKeyboardManager (6.5.4)
+  - Kingfisher (5.10.1):
+    - Kingfisher/Core (= 5.10.1)
+  - Kingfisher/Core (5.10.1)
+  - Masonry (1.1.0)
+  - mob_sharesdk (4.2.9.1):
+    - mob_sharesdk/ShareSDK (= 4.2.9.1)
+    - MOBFoundation
+  - mob_sharesdk/ShareSDK (4.2.9.1):
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKExtension (4.2.9.1):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKPlatforms/QQ (4.2.9.1):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKPlatforms/WeChat (4.2.9.1):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKUI (4.2.9.1):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - MOBFoundation (3.2.6)
+  - ObjectMapper (3.5.1)
+  - OpenShare (0.0.1)
+  - ReachabilitySwift (5.0.0)
+  - SDWebImage (5.3.2):
+    - SDWebImage/Core (= 5.3.2)
+  - SDWebImage/Core (5.3.2)
+  - SnapKit (5.0.1)
+  - SVProgressHUD (2.2.5)
+  - SwiftyJSON (5.0.0)
+  - ZLPhotoBrowser (3.1.2):
+    - SDWebImage
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireObjectMapper
+  - AlicloudPush (~> 1.9.8)
+  - BaiduMapKit (~> 4.1.1)
+  - Cache
+  - DaisyNet
+  - ESTabBarController-swift (~> 2.6.0)
+  - FDFullscreenPopGesture
+  - IQKeyboardManager
+  - Kingfisher
+  - Masonry
+  - mob_sharesdk
+  - mob_sharesdk (~> 4.2.4)
+  - mob_sharesdk/ShareSDKExtension
+  - mob_sharesdk/ShareSDKPlatforms/QQ
+  - mob_sharesdk/ShareSDKPlatforms/WeChat
+  - mob_sharesdk/ShareSDKUI
+  - OpenShare
+  - ReachabilitySwift
+  - SnapKit
+  - SVProgressHUD
+  - SwiftyJSON
+  - ZLPhotoBrowser
+
+SPEC REPOS:
+  https://github.com/aliyun/aliyun-specs.git:
+    - AlicloudPush
+    - AlicloudUT
+    - AlicloudUTDID
+    - AlicloudUtils
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
+    - BaiduMapKit
+    - Cache
+    - DaisyNet
+    - ESTabBarController-swift
+    - FDFullscreenPopGesture
+    - IQKeyboardManager
+    - Kingfisher
+    - Masonry
+    - mob_sharesdk
+    - MOBFoundation
+    - ObjectMapper
+    - OpenShare
+    - ReachabilitySwift
+    - SDWebImage
+    - SnapKit
+    - SVProgressHUD
+    - SwiftyJSON
+    - ZLPhotoBrowser
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
+  AlicloudPush: 3bdd90f69af50562275483b5157571f0a7c50a19
+  AlicloudUT: 5e6a87a56c08ca72c6711beec2449e1c254728ef
+  AlicloudUTDID: 79f509c3e997ef85fe307f8bfb2bb3be27f7e205
+  AlicloudUtils: 9047114c9c1854205ae26db58264bf1555242ffb
+  BaiduMapKit: 51bba432a28316680676b4d453a70e5031f3a7eb
+  Cache: 807c5d86d01a177f06ede9865add3aea269bbfd4
+  DaisyNet: 682c882ade6a4948ea28b255ccba4ec2aad92189
+  ESTabBarController-swift: f31cd3e30bde23619d3b300266f27864d96ffb58
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  IQKeyboardManager: 72b359cd7e777e3a984cedbe05f8da45320cbb63
+  Kingfisher: eb36b7dfcc78d60877051c92c119a2865972961a
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  mob_sharesdk: ea154cd0f2322600bc59a7d1b30450a56a234044
+  MOBFoundation: 08c456357888e4c984fba23bbf04cfd2f4fc1e02
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  OpenShare: a560580dbb729d5c0c3cc1ee84cd6aa4a07e94c6
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SDWebImage: 6ac2eb96571bff96ecde31a987172c5934a0eb7d
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  ZLPhotoBrowser: 7e88434918366af98f8ebbaf5b94206985812ed6
+
+PODFILE CHECKSUM: 54154f57e521b988686a37924efb3c2218ec50a6
+
+COCOAPODS: 1.9.1

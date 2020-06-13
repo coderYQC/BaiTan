@@ -1,0 +1,6 @@
+framework module Pods_BaiTan {
+  umbrella header "Pods-BaiTan-umbrella.h"
+
+  export *
+  module * { export * }
+}
