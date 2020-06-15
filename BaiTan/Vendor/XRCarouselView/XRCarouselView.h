@@ -47,7 +47,7 @@ typedef NS_ENUM(NSInteger, ChangeMode) {
  *  @param carouselView 控件本身
  *  @param index        图片索引
  */
-
+@optional
 - (void)carouselView:(XRCarouselView *)carouselView clickImageAtIndex:(NSInteger)index;
 /**
  *  监听滚动

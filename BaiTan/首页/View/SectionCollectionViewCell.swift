@@ -29,29 +29,34 @@ class SectionCollectionViewCell: UICollectionViewCell{
         NotificationCenter.default.post(name: Notification.Name(kSectionCellDidEndScroll), object: nil)
     }
     func handleScrollViewOffset(scrollView:UIScrollView){
-           if self.cellCanScroll == false{
-               scrollView.contentOffset = CGPoint(x: 0, y: 0)
-           }
-           if scrollView.contentOffset.y <= 0 {
-               self.cellCanScroll = false
-               scrollView.contentOffset = CGPoint(x: 0, y: 0)
-               NotificationCenter.default.post(name: Notification.Name("leaveTop"), object: nil)
-           }
+ 
+        if self.cellCanScroll == false{
+            scrollView.contentOffset = CGPoint(x: 0, y: 0)
+        }
+        if scrollView.contentOffset.y <= 0 {
+            self.cellCanScroll = false
+            scrollView.contentOffset = CGPoint(x: 0, y: 0)
+            NotificationCenter.default.post(name: Notification.Name("leaveTop"), object: nil)
+        }
+     
        }
     
+    var isMore30:Bool?
+            
     //筛选视图动画
     func filterViewAnimation(isUp:Bool){
-        if scrollView!.contentOffset.y >= 50 {
+        print(scrollView!.contentOffset.y)
+        if scrollView!.contentOffset.y >= kFilterBtnH{
             UIView.animate(withDuration: 0.2) {
-                if isUp == true { 
-                    self.filterView.top = -kFilterViewH
+                if isUp == true {
+                    self.filterView.top = -kFilterBtnH
                 }else {
                     self.filterView.top = 0
                 }
             }
-        }else{
-            if self.filterView.top != 0 {
-                self.filterView.top = 0
+        } else{
+            if (!isUp && self.filterView.top != 0) || isUp{
+                self.filterView.top = -scrollView!.contentOffset.y
             }
         }
     }

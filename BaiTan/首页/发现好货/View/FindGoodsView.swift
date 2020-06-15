@@ -9,7 +9,7 @@
 import UIKit
 import YQCKit
 let kHomeSectionViewFrame:CGRect = CGRect(x: 0, y: 0, width: JWidth, height: kContentCellHeight - Constants.statusBarHeight)
-let kFilterViewH:CGFloat = 30
+let kFilterViewH:CGFloat = kFilterRecommendViewH + kFilterBtnH
 class FindGoodsView: SectionCollectionViewCell { 
     var collectionView:QCCollectionView!
     var headerView:GoodsHeaderView?
@@ -38,13 +38,15 @@ class FindGoodsView: SectionCollectionViewCell {
                 self?.handleScrollViewOffset(scrollView: scrollView)
             })
             .scrollDragDirection({[weak self] (scrollView, direction) in
-                self?.filterViewAnimation(isUp:direction == .up)
+                if scrollView.contentOffset.y >= kFilterBtnH * 2{
+                    self?.filterViewAnimation(isUp:direction == .up)
+                }
             })
             .didEndScroll({[weak self] (scrollView, offset) in
                 self?.scrollViewDidEndScroll()
             })
             .scrollDirection({[weak self]  (scrollView, direction) in
-                if scrollView.contentOffset.y < 100 {
+                if scrollView.contentOffset.y < kFilterBtnH * 2 {
                     self?.filterViewAnimation(isUp:direction == .up)
                 }
             })

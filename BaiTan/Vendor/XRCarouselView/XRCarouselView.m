@@ -378,7 +378,7 @@ static NSString *cache;
     self.timer = [NSTimer xr_timerWithTimeInterval:_time < 1? DEFAULTTIME: _time repeats:YES block:^(NSTimer * _Nonnull timer) {
         [weakSelf nextPage];
     }];
-    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
 }
 
 - (void)stopTimer {

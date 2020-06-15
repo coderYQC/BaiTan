@@ -46,7 +46,7 @@ class HomeViewController: BaseViewController {
     var direction: MoveDirection = .none
     
     var bannerCanScroll:Bool = false
-    var isScrollTableView:Bool = false
+//    var isScrollTableView:Bool = false
     var showFilterView:Bool = false
     var curFilterView:BaseFilterView?
     var isAnimatingFilterView:Bool = false
@@ -130,7 +130,7 @@ class HomeViewController: BaseViewController {
         headerView.selectBtnIndexClosure = {[weak self] index in
             self?.isTapStatusBar = false
             self?.collectionView1.setContentOffset(CGPoint(x: JWidth * CGFloat(index), y: 0), animated: true)
-            if index == 1 && self!.showFilterView {
+            if index != self!.findGoodsViewIndex && self!.showFilterView {
                 self?.curFilterBtn?.isSelected = false
                 self?.hideCurFilterContentView(isAnimation: false)
             }
@@ -183,6 +183,14 @@ class HomeViewController: BaseViewController {
         self.myTableView.tableHeaderView = self.headerView
         self.myTableView.collectionView = self.collectionView1
         self.navigationItem.title = "首页"
+        
+        
+        self.filterBestView.backgroundColor = .white
+        self.filterVelocityView.backgroundColor = .white
+        self.categoryFilterView.backgroundColor = .white
+        self.allFilterView.backgroundColor = .white
+        self.filterContentView.backgroundColor = UIColor(white: 0, alpha: 0.3) 
+        
         locationService.delegate = self
         geoCodeSearch.delegate = self
         
@@ -289,8 +297,8 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
         }
         
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-   
-        self.headerView.bannerView.stopTimer()
+//        print("==============\(scrollView.contentOffset.y)")
+         
         var offsetY = -(myTableView.contentOffset.y + Constants.statusBarHeight)
         
         if self.curContentCell?.cellCanScroll == true {
@@ -308,9 +316,13 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
                     print("scrollViewDidScroll 03")
                     scrollToBottom()
                 }else{
-                    self.headerView.bannerView.scrollView.isScrollEnabled = false
-                     self.collectionView1.isScrollEnabled = false
-                     self.isScrollTableView = true
+                      
+                    if self.isFirstIn {
+                        self.isFirstIn = false
+                    }else{
+                       self.collectionView1.isScrollEnabled = false
+                       self.headerView.bannerView.scrollView.isScrollEnabled = false
+                    }
                      
                      if -offsetY >= fixY { //滑到顶端
                          myTableView.contentOffset = CGPoint(x: 0, y: fixY - Constants.statusBarHeight)
@@ -330,7 +342,6 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
                 }
             }
         }
-         
         //控制定位视图
         if -offsetY >= 0 {
             self.headerView.locationCover.top =  -offsetY
@@ -411,7 +422,7 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
         if self.showFilterView {
             self.view.addSubview(self.filterContentView)
             let convertedPoint = self.findGoodsSectionCell.filterView.convert(self.findGoodsSectionCell.filterView.mj_origin, to: self.view)
-            self.filterContentView.top = convertedPoint.y + kFilterViewH
+            self.filterContentView.top = convertedPoint.y + kFilterBtnH
         }
     }
     func scrollToBottom(){
@@ -455,12 +466,6 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
         
         self.headerView.bannerView.scrollView.isScrollEnabled = true
         self.collectionView1.isScrollEnabled = true
-         
-//        if !scrollView.isDragging && !scrollView.isDecelerating{
-//            print("scrollViewDidEndDragging 02")
-//            self.isTapStatusBar = true
-//            return
-//        }
         
         if scrollView == self.myTableView {
             let scrollToScrollStop = !scrollView.isTracking && !scrollView.isDragging && !scrollView.isDecelerating
@@ -485,7 +490,7 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
 //        self.isTapStatusBar = true
         self.headerView.bannerView.scrollView.isScrollEnabled = true
         self.collectionView1.isScrollEnabled = true
-        self.headerView.bannerView.startTimer()
+         
     }
       
     func resetTableviewContentOffsetY() {
@@ -559,6 +564,7 @@ extension HomeViewController: UICollectionViewDelegate,UICollectionViewDataSourc
             return sectionCell
         }
     }
+    
     //展示筛选视图
     func showCurFilterContentView(isAnimation:Bool = true){
         if self.curFilterView == nil {return}
@@ -574,24 +580,22 @@ extension HomeViewController: UICollectionViewDelegate,UICollectionViewDataSourc
         
         if isAnimation {
             self.curFilterView!.transform = CGAffineTransform(translationX: 0, y: -self.curFilterView!.height)
-            UIView.animate(withDuration: isAnimation ? 0.4 : 0, animations: {
+            UIView.animate(withDuration: 0.4, animations: {
                 self.curFilterView!.transform = .identity
             }) { (isFinished) in
+            }
+            UtilTool.dispatchAfter(seconds: 0.42) {
                 self.isAnimatingFilterView = false
                 self.filterContentView.emptyView.top = self.curFilterView?.bottom ?? 0
-                self.collectionView1.isScrollEnabled = false
-                if self.vcCanScroll {
-                    self.myTableView.isScrollEnabled = false
-                }
+                self.curContentCell.filterView.filterBtnView.top = Constants.statusBarHeight + kSegmentHeadViewH +  kInputVH
+                self.view.addSubview(self.curContentCell.filterView.filterBtnView)
             }
         }else{
             self.curFilterView!.transform = .identity
             self.isAnimatingFilterView = false
             self.filterContentView.emptyView.top = self.curFilterView?.bottom ?? 0
-            self.collectionView1.isScrollEnabled = false
-            if self.vcCanScroll {
-                self.myTableView.isScrollEnabled = false
-            }
+            self.curContentCell.filterView.filterBtnView.top = Constants.statusBarHeight + kSegmentHeadViewH +  kInputVH
+            self.view.addSubview(self.curContentCell.filterView.filterBtnView)
         }
     }
     //隐藏筛选视图
@@ -601,7 +605,10 @@ extension HomeViewController: UICollectionViewDelegate,UICollectionViewDataSourc
         }
         self.isAnimatingFilterView = true
         self.curFilterView?.transform = .identity
-        self.collectionView1.isScrollEnabled = true
+        
+        self.curContentCell.filterView.filterBtnView.top = 0
+        self.curContentCell.filterView.addSubview(self.curContentCell.filterView.filterBtnView)
+        
         if isAnimation {
             UIView.animate(withDuration:0.4, animations: {
                 self.curFilterView!.transform = CGAffineTransform(translationX: 0, y: -self.curFilterView!.height)
@@ -612,9 +619,6 @@ extension HomeViewController: UICollectionViewDelegate,UICollectionViewDataSourc
                 self.showFilterView = false
                 self.curFilterView = nil
                 self.isAnimatingFilterView = false
-                if self.vcCanScroll {
-                    self.myTableView.isScrollEnabled = true
-                }
             }
         }else{
             self.curFilterView!.transform = CGAffineTransform(translationX: 0, y: -self.curFilterView!.height)
@@ -624,9 +628,6 @@ extension HomeViewController: UICollectionViewDelegate,UICollectionViewDataSourc
             self.showFilterView = false
             self.curFilterView = nil
             self.isAnimatingFilterView = false
-            if self.vcCanScroll {
-                self.myTableView.isScrollEnabled = true
-            }
         }
     }
 }
@@ -673,29 +674,18 @@ extension HomeViewController : BMKMapViewDelegate,BMKLocationServiceDelegate,BMK
 }
     
 extension HomeViewController:XRCarouselViewDelegate {
-   
-    func carouselView(_ carouselView: XRCarouselView!, clickImageAt index: Int) {
-       JPrint(msg: index)
-    }
-    func carouselViewScrolling(){
-        if self.isScrollTableView {
-            myTableView.isScrollEnabled = false
-        }
-    }
+      
     func carouselViewWillBeginDragging(){
-        if self.vcCanScroll {
-            myTableView.isScrollEnabled = true
-        }
+        myTableView.isScrollEnabled = false
     }
-    
     func carouselViewDidEndDragging(){
         if self.vcCanScroll {
             myTableView.isScrollEnabled = true
         }
     }
     func carouselViewDidEndScroll() {
-           if self.vcCanScroll {
-               myTableView.isScrollEnabled = true
-           }
-       }
+        if self.vcCanScroll {
+            myTableView.isScrollEnabled = true
+        }
+    }
 }

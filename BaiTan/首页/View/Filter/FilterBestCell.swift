@@ -8,7 +8,8 @@
 
 import UIKit
 import SwiftyJSON
-class FilterBestCell: UITableViewCell { 
+class FilterBestCell: UITableViewCell {
+    
     @IBOutlet weak var titleLab: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
