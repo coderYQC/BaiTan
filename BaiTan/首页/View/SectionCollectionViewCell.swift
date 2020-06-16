@@ -8,11 +8,23 @@
 
 import UIKit
 import YQCKit
+
+
 class SectionCollectionViewCell: UICollectionViewCell{
  
     var cellCanScroll:Bool = false
     var scrollView:UIScrollView?
+    var leftScrollView:UIScrollView?
     var filterCanAnimation:Bool = false
+    var isHomeCell:Bool = true
+ 
+    var leftCellCanScroll:Bool = false
+    var lockRightScroll:Bool = false
+    var lockLeftScroll:Bool = false
+    
+    
+    var mainTableView:UITableView?
+    
     lazy var filterView:FilterView = {
         let filterView = FilterView(frame: CGRect(x: 0, y: 0, width: JWidth, height: kFilterViewH)).backgroundColor(Constants.APP_BACKGROUND_COLOR)
         return filterView
@@ -29,17 +41,52 @@ class SectionCollectionViewCell: UICollectionViewCell{
         NotificationCenter.default.post(name: Notification.Name(kSectionCellDidEndScroll), object: nil)
     }
     func handleScrollViewOffset(scrollView:UIScrollView){
- 
+        
         if self.cellCanScroll == false{
-            scrollView.contentOffset = CGPoint(x: 0, y: 0)
+               scrollView.contentOffset = CGPoint(x: 0, y: 0)
         }
         if scrollView.contentOffset.y <= 0 {
-            self.cellCanScroll = false
-            scrollView.contentOffset = CGPoint(x: 0, y: 0)
-            NotificationCenter.default.post(name: Notification.Name("leaveTop"), object: nil)
+               self.cellCanScroll = false
+               scrollView.contentOffset = CGPoint(x: 0, y: 0)
+               NotificationCenter.default.post(name: Notification.Name(self.isHomeCell ? "leaveTop" : "leaveTop2"), object: nil)
+        } 
+    }
+    
+    func handleScrollViewOffsetWithDirection(scrollView:UIScrollView,isUp:Bool = false){
+        if scrollView == self.leftScrollView {
+            //左侧滑动，停止右侧滑动
+//            if lockRightScroll == false || lockLeftScroll == true{
+//                self.scrollView!.setContentOffset(self.scrollView!.contentOffset, animated: false)
+//                self.lockRightScroll = true
+//            }
+            if self.leftCellCanScroll == false{
+                self.leftScrollView!.contentOffset = CGPoint(x: 0, y: 0)
+            }
+            if scrollView.contentOffset.y <= 0 {
+                self.leftCellCanScroll = false
+                leftScrollView!.contentOffset = CGPoint(x: 0, y: 0)
+                NotificationCenter.default.post(name: Notification.Name(self.isHomeCell ? "leaveTop" : "leaveTop3"), object: nil)
+            }
+        }else{
+            //右侧滑动，停止左侧滑动
+//            if lockRightScroll == true  || lockLeftScroll == false{
+//                self.leftScrollView!.setContentOffset(leftScrollView!.contentOffset, animated: false)
+//                lockLeftScroll = true
+//            }
+            if self.cellCanScroll == false{
+                self.scrollView!.contentOffset = CGPoint(x: 0, y: 0)
+            }
+             
+            
+            if scrollView.contentOffset.y <= 0 {
+                self.cellCanScroll = false
+                self.scrollView!.contentOffset = CGPoint(x: 0, y: 0)
+                NotificationCenter.default.post(name: Notification.Name(self.isHomeCell ? "leaveTop" : "leaveTop2"), object: nil)
+            }
+             
         }
-     
-       }
+    }
+    
     
     var isMore30:Bool?
             

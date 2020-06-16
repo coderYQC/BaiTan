@@ -24,7 +24,7 @@ let kItemsFrames:[CGRect] = [CGRect(x: 0, y: 0, width: kActivityItemW, height: k
 
 let kItemImgs:[String] = ["itemLeft","itemRightTop","itemRightBottom"]
  
-let kSegmentTitleArr = ["附近摊主","发现好货"]
+let kSegmentTitleArr = ["发现好货","附近摊主"]
       
 class HomeHeaderView: UIView {
  
@@ -82,6 +82,7 @@ class HomeHeaderView: UIView {
       
         for (i,title) in kSegmentTitleArr.enumerated() {
         let btn = UIButton()
+            .frame(CGRect(x: (space + btnWidth) * CGFloat(i) + startX, y: 5, width: btnWidth, height: btnHeight))
             .titleColor(Constants.k96Color)
             .titleColor_Sel(Constants.k33Color)
             .adjustsImageWhenHighlighted(false)
@@ -90,7 +91,7 @@ class HomeHeaderView: UIView {
             .addAction {[weak self] (btn) in
                 self?.setCurSelBtn(index: i)
             }
-        .frame(CGRect(x: (space + btnWidth) * CGFloat(i) + startX, y: 5, width: btnWidth, height: btnHeight))
+         
             self.titleBtnArr.append(btn)
             headerView.addSubview(btn)
             if i == 0 {

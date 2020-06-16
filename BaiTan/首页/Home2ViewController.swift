@@ -9,10 +9,6 @@
 import UIKit
 import YQCKit
 
-let kNaviViewHeight:CGFloat = 140
-let kTableViewHeight = JHeight - Constants.tabBarHeight + Constants.statusBarHeight
-
-let kContentCellHeight = kTableViewHeight - kInputVH - kSegmentHeadViewH - Constants.statusBarHeight
 
 class Home2ViewController: BaseViewController {
    lazy  var navView: JYHomeNavView = {

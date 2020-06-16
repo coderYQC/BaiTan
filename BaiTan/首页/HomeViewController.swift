@@ -9,6 +9,15 @@
 import UIKit
 import YQCKit
 import SwiftyJSON
+
+let kNaviViewHeight:CGFloat = 140
+
+let kTableViewHeight = JHeight - Constants.tabBarHeight + Constants.statusBarHeight
+
+let kContentCellHeight = kTableViewHeight - kInputVH - kSegmentHeadViewH - Constants.statusBarHeight
+
+ 
+
 let kOtherViewH:CGFloat = kBannerViewH + kActivityItemsViewH
 
 let kHeaderViewH:CGFloat = Constants.statusBarHeight + kLocationViewH + kInputVH + kSegmentHeadViewH + kRecommendSearchViewH + kOtherViewH
@@ -46,7 +55,7 @@ class HomeViewController: BaseViewController {
     var direction: MoveDirection = .none
     
     var bannerCanScroll:Bool = false
-//    var isScrollTableView:Bool = false
+    
     var showFilterView:Bool = false
     var curFilterView:BaseFilterView?
     var isAnimatingFilterView:Bool = false
@@ -353,6 +362,7 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
             self.headerView.locationCover.height = kCoverH
             self.headerView.locationView.top = Constants.statusBarHeight
         }
+        
         //控制定位遮罩
         var locationCoverAlpha:CGFloat = 1
         

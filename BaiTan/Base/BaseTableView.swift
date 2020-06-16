@@ -11,10 +11,11 @@ import UIKit
 class BaseTableView: UITableView,UIGestureRecognizerDelegate{
     var collectionView:UICollectionView?
     var canSimultaneously:Bool = true
+    
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
-    
+
 
 //    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
 //

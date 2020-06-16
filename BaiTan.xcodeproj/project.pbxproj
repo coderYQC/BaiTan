@@ -20,6 +20,13 @@
 		06425C2824923F8500C7F98B /* FilterBestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06425C2724923F8500C7F98B /* FilterBestModel.swift */; };
 		06425C502493892500C7F98B /* CategoryFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06425C4F2493892500C7F98B /* CategoryFilterView.swift */; };
 		06425C52249399FD00C7F98B /* FilterAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06425C51249399FD00C7F98B /* FilterAllView.swift */; };
+		0642D29F24971C87000EBD62 /* GoodsSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D29E24971C87000EBD62 /* GoodsSelectionViewController.swift */; };
+		0642D2A2249728C6000EBD62 /* ChooseGoodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2A1249728C6000EBD62 /* ChooseGoodsView.swift */; };
+		0642D2A524973159000EBD62 /* GoodsSelectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2A424973159000EBD62 /* GoodsSelectionHeaderView.swift */; };
+		0642D2A8249784D2000EBD62 /* GoodsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2A7249784D1000EBD62 /* GoodsSectionHeader.swift */; };
+		0642D2AA249784EE000EBD62 /* GoodsSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0642D2A9249784EE000EBD62 /* GoodsSectionHeader.xib */; };
+		0642D2AD249787BB000EBD62 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2AB249787BB000EBD62 /* CategoryCell.swift */; };
+		0642D2AE249787BB000EBD62 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0642D2AC249787BB000EBD62 /* CategoryCell.xib */; };
 		065085692490C00D00D52AA7 /* NearbyStallOwnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065085672490C00D00D52AA7 /* NearbyStallOwnerCell.swift */; };
 		0650856A2490C00D00D52AA7 /* NearbyStallOwnerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 065085682490C00D00D52AA7 /* NearbyStallOwnerCell.xib */; };
 		0655429E248F383F000CDFA5 /* Home2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0655429D248F383F000CDFA5 /* Home2ViewController.swift */; };
@@ -175,6 +182,13 @@
 		06425C2724923F8500C7F98B /* FilterBestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBestModel.swift; sourceTree = "<group>"; };
 		06425C4F2493892500C7F98B /* CategoryFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterView.swift; sourceTree = "<group>"; };
 		06425C51249399FD00C7F98B /* FilterAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterAllView.swift; sourceTree = "<group>"; };
+		0642D29E24971C87000EBD62 /* GoodsSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsSelectionViewController.swift; sourceTree = "<group>"; };
+		0642D2A1249728C6000EBD62 /* ChooseGoodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseGoodsView.swift; sourceTree = "<group>"; };
+		0642D2A424973159000EBD62 /* GoodsSelectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsSelectionHeaderView.swift; sourceTree = "<group>"; };
+		0642D2A7249784D1000EBD62 /* GoodsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsSectionHeader.swift; sourceTree = "<group>"; };
+		0642D2A9249784EE000EBD62 /* GoodsSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodsSectionHeader.xib; sourceTree = "<group>"; };
+		0642D2AB249787BB000EBD62 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		0642D2AC249787BB000EBD62 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		065085672490C00D00D52AA7 /* NearbyStallOwnerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyStallOwnerCell.swift; sourceTree = "<group>"; };
 		065085682490C00D00D52AA7 /* NearbyStallOwnerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NearbyStallOwnerCell.xib; sourceTree = "<group>"; };
 		0655429B248E4B13000CDFA5 /* BaiTanDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BaiTanDebug.entitlements; sourceTree = "<group>"; };
@@ -399,6 +413,44 @@
 				06B6B3EB248B9C2500AE2A55 /* QCTableViewExtension.swift */,
 			);
 			path = QCListView;
+			sourceTree = "<group>";
+		};
+		0642D29D24971C45000EBD62 /* 商品选择 */ = {
+			isa = PBXGroup;
+			children = (
+				0642D2A624973D46000EBD62 /* View */,
+				0642D2A0249728A1000EBD62 /* 选择商品 */,
+				0642D29E24971C87000EBD62 /* GoodsSelectionViewController.swift */,
+			);
+			path = "商品选择";
+			sourceTree = "<group>";
+		};
+		0642D2A0249728A1000EBD62 /* 选择商品 */ = {
+			isa = PBXGroup;
+			children = (
+				0642D2A324973142000EBD62 /* View */,
+				0642D2A1249728C6000EBD62 /* ChooseGoodsView.swift */,
+			);
+			path = "选择商品";
+			sourceTree = "<group>";
+		};
+		0642D2A324973142000EBD62 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0642D2A424973159000EBD62 /* GoodsSelectionHeaderView.swift */,
+				0642D2A7249784D1000EBD62 /* GoodsSectionHeader.swift */,
+				0642D2A9249784EE000EBD62 /* GoodsSectionHeader.xib */,
+				0642D2AB249787BB000EBD62 /* CategoryCell.swift */,
+				0642D2AC249787BB000EBD62 /* CategoryCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0642D2A624973D46000EBD62 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		065085632490BF7700D52AA7 /* 附近摊主 */ = {
@@ -710,6 +762,7 @@
 		06B6B308248B656900AE2A55 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				0642D29D24971C45000EBD62 /* 商品选择 */,
 				065085632490BF7700D52AA7 /* 附近摊主 */,
 				06B6B510248BB6C400AE2A55 /* 发现好货 */,
 				06B6B30A248B657600AE2A55 /* Model */,
@@ -1079,6 +1132,7 @@
 				06B6B53F248C771000AE2A55 /* Loading_3@2x.tiff in Resources */,
 				06618C47248B587400F12D72 /* LaunchScreen.storyboard in Resources */,
 				06B6B53D248C771000AE2A55 /* Loading_7@2x.tiff in Resources */,
+				0642D2AA249784EE000EBD62 /* GoodsSectionHeader.xib in Resources */,
 				0650856A2490C00D00D52AA7 /* NearbyStallOwnerCell.xib in Resources */,
 				06B6B524248C58C100AE2A55 /* GoodsCell.xib in Resources */,
 				06B6B53C248C771000AE2A55 /* Loading_5@2x.tiff in Resources */,
@@ -1087,6 +1141,7 @@
 				06B6B52A248C6D6100AE2A55 /* MarqueeView.xib in Resources */,
 				06B6B541248C771000AE2A55 /* Loading_1@2x.tiff in Resources */,
 				06618C44248B587400F12D72 /* Assets.xcassets in Resources */,
+				0642D2AE249787BB000EBD62 /* CategoryCell.xib in Resources */,
 				06B6B2FF248B5A5800AE2A55 /* CityData.plist in Resources */,
 				06B6B2E3248B5A5800AE2A55 /* CustomAlertView.xib in Resources */,
 				06B6B2E8248B5A5800AE2A55 /* TestAlertContentView.xib in Resources */,
@@ -1194,6 +1249,7 @@
 				06B6B30E248B65B000AE2A55 /* HomeViewController.swift in Sources */,
 				06B6B320248B667E00AE2A55 /* MineViewController.swift in Sources */,
 				06B6B2E6248B5A5800AE2A55 /* YQCAlertContentView.swift in Sources */,
+				0642D2A8249784D2000EBD62 /* GoodsSectionHeader.swift in Sources */,
 				06B6B2C5248B5A5800AE2A55 /* RequestUtil.swift in Sources */,
 				06B6B2C9248B5A5800AE2A55 /* JLabel.swift in Sources */,
 				06B6B2DD248B5A5800AE2A55 /* StringExtension.swift in Sources */,
@@ -1229,6 +1285,7 @@
 				06B6B514248BDAC700AE2A55 /* NearbyStallOwnerView.swift in Sources */,
 				06B6B2EA248B5A5800AE2A55 /* UIImage+ImageEffects.m in Sources */,
 				06B6B2EF248B5A5800AE2A55 /* TYAlertController+TransitionAnimate.m in Sources */,
+				0642D2A2249728C6000EBD62 /* ChooseGoodsView.swift in Sources */,
 				06B6B35B248B68C300AE2A55 /* MJRefreshAutoGifFooter.m in Sources */,
 				06B6B2DA248B5A5800AE2A55 /* NSUserDefaults+Extension.swift in Sources */,
 				06B6B2C4248B5A5800AE2A55 /* AlertViewManager.swift in Sources */,
@@ -1250,6 +1307,7 @@
 				06B6B3D7248B874300AE2A55 /* SectionCollectionViewCell.swift in Sources */,
 				06B6B2C3248B5A5800AE2A55 /* TQLocationConverter.m in Sources */,
 				06B6B529248C6D6100AE2A55 /* MarqueeView.swift in Sources */,
+				0642D29F24971C87000EBD62 /* GoodsSelectionViewController.swift in Sources */,
 				06B6B516248BDB0100AE2A55 /* NearbyStallOwnerViewModel.swift in Sources */,
 				06B6B359248B68C300AE2A55 /* MJRefreshBackNormalFooter.m in Sources */,
 				06425C1524918C9B00C7F98B /* XRCarouselView.m in Sources */,
@@ -1265,12 +1323,14 @@
 				06B6B520248C485400AE2A55 /* NearbyDynamicsHeaderView.swift in Sources */,
 				06425C502493892500C7F98B /* CategoryFilterView.swift in Sources */,
 				06B6B2EB248B5A5800AE2A55 /* TYAlertView.m in Sources */,
+				0642D2A524973159000EBD62 /* GoodsSelectionHeaderView.swift in Sources */,
 				06B6B2D9248B5A5800AE2A55 /* ColorExtension.swift in Sources */,
 				06B6B368248B691300AE2A55 /* JYHomeNavView.swift in Sources */,
 				06B6B2D0248B5A5800AE2A55 /* BarButtomItenExtension.swift in Sources */,
 				06B6B362248B68C300AE2A55 /* MJRefreshBackFooter.m in Sources */,
 				06B6B2E0248B5A5800AE2A55 /* HerizonalPanGestureRecognizer.swift in Sources */,
 				06B6B526248C5B4800AE2A55 /* GoodsModel.swift in Sources */,
+				0642D2AD249787BB000EBD62 /* CategoryCell.swift in Sources */,
 				06B6B523248C58C100AE2A55 /* GoodsCell.swift in Sources */,
 				06B6B361248B68C300AE2A55 /* MJRefreshHeader.m in Sources */,
 				06B6B2DB248B5A5800AE2A55 /* UICollectionViewExtension.swift in Sources */,
