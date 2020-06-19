@@ -101,10 +101,9 @@ class ChooseGoodsView: SectionCollectionViewCell {
                 self?.handleScrollViewOffsetWithTwoScrollViews(scrollView: scrollView)
             })
             .didEndDragging({[weak self] (_, _) in
-//                if self!.isTapLeftCell {
-//                    self?.isTapLeftCell = false
-//                    self?.scrollowLeftTable()
-//                }
+                if self!.isTapLeftCell {
+                    self?.isTapLeftCell = false
+                }
                 self?.scrollowLeftTable()
             })
             .didEndScroll({[weak self] (_, _) in
