@@ -53,7 +53,7 @@ class FilterView: UIView {
                        btn.hasValue = true
                    }
                 }
-                print("点击了第\(i)个筛选条件")
+//                print("点击了第\(i)个筛选条件")
                 self?.selectedFilterBtnClosure?(btn)
             }
             btns.append(btn)

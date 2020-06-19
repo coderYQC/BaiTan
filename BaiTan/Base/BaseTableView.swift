@@ -11,29 +11,18 @@ import UIKit
 class BaseTableView: UITableView,UIGestureRecognizerDelegate{
     var collectionView:UICollectionView?
     var canSimultaneously:Bool = true
-    
+    var isChooseFood:Bool = false
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
 
 
-//    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-//
-//        for subView in self.subviews{
-//            for subview2 in subView.subviews {
-//                for subview3 in subview2.subviews {
-//                    let convertedPoint = subview3.convert(point, from: self) //把父控件上的坐标点转换为子控件坐标系下的点
-//                    if subview3 == self.collectionView  {
-//                        if convertedPoint.y >= 0 {
-//                            self.canSimultaneously = true
-//                            return self
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//
-//        self.canSimultaneously = false
-//        return super.hitTest(point, with: event)
-//    }
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        if isChooseFood  {
+            if point.y < kGoodsSelectionTableHeaderViewH - kGoodsSelectionSegmentH{
+                return nil
+            }
+        }
+        return super.hitTest(point, with: event)
+    }
 }

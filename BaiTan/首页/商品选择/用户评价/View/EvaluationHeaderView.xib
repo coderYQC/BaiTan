@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EvaluationHeaderView" customModule="BaiTan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="253"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="evaluationHeaderView" translatesAutoresizingMaskIntoConstraints="NO" id="QW5-Ig-kgH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="253"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="QW5-Ig-kgH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6wI-ak-3qH"/>
+                <constraint firstAttribute="trailing" secondItem="QW5-Ig-kgH" secondAttribute="trailing" id="XA2-Ng-ME3"/>
+                <constraint firstItem="QW5-Ig-kgH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="XzN-uR-vff"/>
+                <constraint firstItem="QW5-Ig-kgH" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="k38-YT-vVc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="309.4202898550725" y="-246.76339285714283"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="evaluationHeaderView" width="810" height="546"/>
+    </resources>
+</document>

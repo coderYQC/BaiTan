@@ -10,6 +10,7 @@ import UIKit
 
 typealias statusBarChangeClosure = (UIStatusBarStyle) ->()
 
+let kNaviBtnH:CGFloat = 44
 
 class CustomNaviBar: UIView {
   
@@ -40,7 +41,7 @@ class CustomNaviBar: UIView {
             self.statusBarChange?(statusBarStyle!)
         }
     }
-    
+    var rightBtns:[UIButton] = []
     var title:String = "" {
         didSet {
             self.titleLab.text = title
@@ -57,11 +58,11 @@ class CustomNaviBar: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backBtn = UIButton().frame(0, self.height - 40, 60, 40).superView(self).addAction({[weak self] (_) in
+        self.backBtn = UIButton().frame(0, self.height - kNaviBtnH, 60, kNaviBtnH).superView(self).addAction({[weak self] (_) in
             self?.leftBtnClick?()
         })
-        self.rightItemsView = UIView().frame(self.width - 60, self.height - 40, 60, 40).superView(self)
-        self.titleLab = UILabel().frame(self.backBtn.left, self.height - 40, self.width - self.backBtn.width - self.rightItemsView.width, 40).font(20).textColor(.black).superView(self)
+        self.rightItemsView = UIView().frame(self.width - 60, self.height - kNaviBtnH, 60, kNaviBtnH).superView(self)
+        self.titleLab = UILabel().frame(self.backBtn.left, self.height - kNaviBtnH, self.width - self.backBtn.width - self.rightItemsView.width, kNaviBtnH).font(20).textColor(.black).superView(self)
     }
     
     required init?(coder: NSCoder) {
@@ -73,29 +74,31 @@ class CustomNaviBar: UIView {
         self.rightItemsView.left = self.width - self.rightItemsView.width
         self.titleLab.width = JWidth - self.rightItemsView.width * 2
         self.titleLab.centerX = self.centerX
+        self.rightBtns.removeAll()
         if btnImages.count == 1 {
-            UIButton()
-            .frame(self.rightItemsView.bounds)
+            let btn = UIButton()
+                .frame(self.rightItemsView.bounds)
             .image(btnImages.first!)
             .backgroundColor(.clear)
+            .adjustsImageWhenHighlighted(false)
             .contentMode(.center)
             .superView(self.rightItemsView)
             .addAction { (btn) in
                 closure?(0)
             }
-            .dispose()
+            self.rightBtns.append(btn)
         }else{
             for (i,img) in btnImages.enumerated(){
-               UIButton()
-                .frame(35 * CGFloat(i), 0, 35,44)
+                let btn = UIButton()
+                .frame(35 * CGFloat(i), 0, 35,kNaviBtnH)
                 .image(img)
                 .backgroundColor(.clear)
                 .contentMode(.center)
                 .superView(self.rightItemsView)
                 .addAction { (btn) in
                     closure?(i)
-                }
-                .dispose()
+                }  
+                self.rightBtns.append(btn)
             }
         }
         

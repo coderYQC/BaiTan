@@ -14,8 +14,8 @@
 - (void)prepare {
     [super prepare];
     //GIF数据
-    NSArray * idleImages = [self getRefreshingImageArrayWithStartIndex:1 endIndex:8];
-    NSArray * refreshingImages = [self getRefreshingImageArrayWithStartIndex:1 endIndex:8];
+    NSArray * idleImages = [self getRefreshingImageArrayWithStartIndex:1 endIndex:15];
+    NSArray * refreshingImages = [self getRefreshingImageArrayWithStartIndex:1 endIndex:15];
     //普通状态
     [self setImages:idleImages forState:MJRefreshStateIdle];
     //即将刷新状态
@@ -35,7 +35,7 @@
 - (NSArray *)getRefreshingImageArrayWithStartIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex {
     NSMutableArray * imageArray = [NSMutableArray array];
     for (NSUInteger i = startIndex; i <= endIndex; i++) {
-        UIImage * image = [UIImage imageNamed:[NSString stringWithFormat:@"Loading_%zd.tiff",i]];
+        UIImage * image = [UIImage imageNamed:[NSString stringWithFormat:@"icon_kangaroo_home_pull_down_loading_%zd",i]];
         if (image) {
             [imageArray addObject:image];
         }
@@ -43,3 +43,15 @@
     return imageArray;
 }
 @end
+
+
+//NSMutableArray *headRefreshStartGif = [NSMutableArray array];
+//for (int i = 1; i <= 4; i++) {
+//    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"refresh%d",i]];
+//    [headRefreshStartGif addObject:image];
+//}
+//NSMutableArray *headRefreshingGif = [NSMutableArray array];
+//for (int i = 1; i <= 4; i++) {
+//    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"refresh%d",i]];
+//    [headRefreshingGif addObject:image];
+//}

@@ -99,8 +99,9 @@ class HomeViewController: BaseViewController {
        return view
     }()
     lazy var gifHeader:CustomGifHeader = {
-       
+        
         return CustomGifHeader.init {[weak self] in
+            
             let curIndex = self!.selTitleBtnIndex
                        
             UtilTool.dispatchAfter(seconds: 1) {
@@ -243,7 +244,7 @@ class HomeViewController: BaseViewController {
     func getBannerImages(){
         
         print("获取banner图片")
-        self.headerView.bannerImages = ["bannerImage","bannerImage","bannerImage","bannerImage","bannerImage"]
+        self.headerView.bannerImages = ["1","2","3","4","5"]
     }
     func getInputKeyWords(){
         var stringArray:[String] = []
@@ -306,7 +307,8 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
         }
         
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        print("==============\(scrollView.contentOffset.y)")
+        
+        print("==============\(scrollView.contentOffset.y)")
          
         var offsetY = -(myTableView.contentOffset.y + Constants.statusBarHeight)
         
@@ -332,7 +334,6 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
                        self.collectionView1.isScrollEnabled = false
                        self.headerView.bannerView.scrollView.isScrollEnabled = false
                     }
-                     
                      if -offsetY >= fixY { //滑到顶端
                          myTableView.contentOffset = CGPoint(x: 0, y: fixY - Constants.statusBarHeight)
                            

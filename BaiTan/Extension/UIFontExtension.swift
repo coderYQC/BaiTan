@@ -41,7 +41,7 @@ extension UIFont {
     }
     
     public static func DINAlternateBold(size: CGFloat) -> UIFont {
-        guard let font = UIFont(name: "Georgia", size: size) else {
+        guard let font = UIFont(name: "DINAlternate-Bold", size: size) else {
             return UIFont.systemFont(ofSize: size)
         }
         return font

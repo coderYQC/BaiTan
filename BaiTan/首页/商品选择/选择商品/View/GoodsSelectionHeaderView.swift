@@ -18,7 +18,7 @@ class GoodsSelectionHeaderView: UIView {
     var dotCenterX:CGFloat = 0
     
     lazy var dotView:UIView = {
-        let dotView = UIView(frame: CGRect(x: 0, y: 0, width: 13, height: 2)).backgroundColor(Constants.APP_MAIN_COLOR)
+        let dotView = UIView(frame: CGRect(x: 0, y: 0, width: 26, height: 2)).backgroundColor(Constants.APP_MAIN_COLOR)
         return dotView
     }()
     
@@ -38,11 +38,12 @@ class GoodsSelectionHeaderView: UIView {
         for (i,title) in kGoodsSelectionSegmentTitleArr.enumerated() {
             let btn = UIButton()
                   .frame(CGRect(x: (space + btnWidth) * CGFloat(i) + startX, y: 0, width: btnWidth, height: btnHeight))
-                  .titleColor(Constants.k96Color)
+                  .titleColor(Constants.k66Color)
                   .titleColor_Sel(Constants.k33Color)
                   .adjustsImageWhenHighlighted(false)
                   .title(title)
-                  .textFont(UIFont.DINAlternateBold(size: 16))
+                .textFont(UIFont.systemFont(ofSize: 17, weight: .regular))
+            
                   .addAction {[weak self] (btn) in
                        self?.setCurSelBtn(index: i)
                   }
@@ -56,6 +57,10 @@ class GoodsSelectionHeaderView: UIView {
                   }
             }
             setCurSelBtn(index: self.selTitleBtnIndex)
+        
+        
+        UIView(frame: CGRect(x: 0, y: kGoodsSelectionSegmentH - 1, width: JWidth, height: 1)).backgroundColor(UIColor(white: 0, alpha: 0.05)).superView(headerView).dispose()
+        
         return headerView
     }()
     
@@ -64,9 +69,9 @@ class GoodsSelectionHeaderView: UIView {
          selectBtnIndexClosure?(self.selTitleBtnIndex)
          for (btnIndex,titleBtn) in self.titleBtnArr.enumerated() {
              if index == btnIndex {
-                titleBtn.isSelected(true).dispose()
+                titleBtn.isSelected(true).textFont(UIFont.systemFont(ofSize: 17, weight: .semibold)).dispose()
              } else {
-                titleBtn.isSelected(false).dispose()
+                titleBtn.isSelected(false).textFont(UIFont.systemFont(ofSize: 17, weight: .regular)).dispose()
              }
          }
      }

@@ -95,28 +95,8 @@ class RequestUtil: NSObject {
             Alamofire.request(fullUrl,method:method,parameters:nil).responseJSON { response in
                 if(response.result.isSuccess){
                     let result = JSON(response.result.value!)
-                    if other == true {
-                        if result["success"].boolValue == true {
-                            successHandler(result)
-                        }else{
-                            let errMsg = result["msg"].stringValue == "" ? serverError : result["msg"].stringValue
-                            failHandler(errMsg!)
-                        }
-                    } else {
-                        if result[Constants.returnCode].stringValue != "\(Constants.returnCodeEnum.SUCCESS)" {
-                            let errMsg = result[Constants.returnMsg].stringValue == "" ? serverError : result[Constants.returnMsg].stringValue
-                            if errMsg == kLoginOutdateErrMsg || errMsg == kLoginOutdateErrMsg2 {
-                                UtilTool.handleOutdateApiRequest()
-                            }else{
-                                failHandler(errMsg!)
-                            }
-                        }else{
-                            successHandler(result)
-                        }
+                         successHandler(result)
                     }
-                }else{
-                    failHandler(serverError)
-                }
             }
         }
     }

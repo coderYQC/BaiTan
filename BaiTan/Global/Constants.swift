@@ -22,7 +22,7 @@ class Constants: NSObject {
         //【偏向浅蓝色】
         static let kLightBlueColor = UIColor.colorFromRGB(0xE7F2FF)
     static let APP_BACKGROUND_COLOR = UIColor.init(red: kAPP_BG_RGB_VAL / 255.0, green: kAPP_BG_RGB_VAL / 255.0, blue: kAPP_BG_RGB_VAL / 255.0, alpha: 1)
-        static let kBtnDisableColor = UIColor.colorFromRGB(0xF1F1F1)
+        static let kBtnDisableColor = UIColor.colorFromRGB(0xF2F2F2)
         static let kOrangeColor = UIColor.colorFromRGB(0xFFAC29)
         
         //------------------灰色系----------------/

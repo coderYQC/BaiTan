@@ -49,6 +49,8 @@
 //#import "QMChatRoomGuestBookViewController.h"
 //#import "UINavigationController+FDFullscreenPopGesture.h"
 
+#import "MTBaseRefresh.h"
+
 //7moor end +++++++++++++
 
 

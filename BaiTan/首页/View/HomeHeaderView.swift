@@ -87,7 +87,7 @@ class HomeHeaderView: UIView {
             .titleColor_Sel(Constants.k33Color)
             .adjustsImageWhenHighlighted(false)
             .title(title)
-            .textFont(UIFont.DINAlternateBold(size: 22))
+            .textFont(UIFont.systemFont(ofSize: 22, weight: .light))
             .addAction {[weak self] (btn) in
                 self?.setCurSelBtn(index: i)
             }

@@ -61,10 +61,10 @@ enum MainProvider{
         let v3 = ShoppingCartViewController()
         let v4 = MineViewController()
         
-        v1.tabBarItem = ESTabBarItem(IrregularityBasicContentView(), title: "首页", image: UIImage(named: "tabbar_home_nor"), selectedImage: UIImage(named: "tabbar_home_sel1"))
-        v2.tabBarItem = ESTabBarItem(IrregularityBasicContentView(), title: "消息", image: UIImage(named: "tabbar_category_nor"), selectedImage: UIImage(named: "tabbar_category_sel1"))
-        v3.tabBarItem = ESTabBarItem(IrregularityBasicContentView(), title: "购物车", image: UIImage(named: "tabbar_customer_nor"), selectedImage: UIImage(named: "tabbar_customer_sel1"))
-        v4.tabBarItem = ESTabBarItem(IrregularityBasicContentView(), title: "我的", image: UIImage(named: "tabbar_profile_nor"), selectedImage: UIImage(named: "tabbar_profile_sel1"))
+        v1.tabBarItem = ESTabBarItem(IrregularityBasicContentView(), title: "首页", image: UIImage(named: "tabbar_home_nor"), selectedImage: UIImage(named: "tabbar_home_sel"))
+        v2.tabBarItem = ESTabBarItem(IrregularityBasicContentView(), title: "消息", image: UIImage(named: "tabbar_category_nor"), selectedImage: UIImage(named: "tabbar_category_sel"))
+        v3.tabBarItem = ESTabBarItem(IrregularityBasicContentView(), title: "购物车", image: UIImage(named: "tabbar_category_nor"), selectedImage: UIImage(named: "tabbar_category_sel"))
+        v4.tabBarItem = ESTabBarItem(IrregularityBasicContentView(), title: "我的", image: UIImage(named: "tabbar_profile_nor"), selectedImage: UIImage(named: "tabbar_profile_sel"))
         
         tabBarController.viewControllers = [MainNavigationController(rootViewController: v1),
                                             MainNavigationController(rootViewController: v2),

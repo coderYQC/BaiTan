@@ -35,7 +35,9 @@ class FindGoodsView: SectionCollectionViewCell {
                 cell.goods = model
             })
             .cellDidSelect({ (indexPath, model) in
-                UtilTool.pushViewController(vc: GoodsSelectionViewController())
+                let vc = GoodsSelectionViewController()
+                vc.id = indexPath.row
+                UtilTool.pushViewController(vc: vc)
             })
             .didScroll({[weak self] (scrollView, offset) in
                 self?.handleScrollViewOffset(scrollView: scrollView)

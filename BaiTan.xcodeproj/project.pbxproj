@@ -27,6 +27,26 @@
 		0642D2AA249784EE000EBD62 /* GoodsSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0642D2A9249784EE000EBD62 /* GoodsSectionHeader.xib */; };
 		0642D2AD249787BB000EBD62 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2AB249787BB000EBD62 /* CategoryCell.swift */; };
 		0642D2AE249787BB000EBD62 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0642D2AC249787BB000EBD62 /* CategoryCell.xib */; };
+		0642D2B22498BE03000EBD62 /* MTBaseRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2B02498BE03000EBD62 /* MTBaseRefresh.m */; };
+		0642D2B42498C2A9000EBD62 /* Comm.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0642D2B32498C2A9000EBD62 /* Comm.xcassets */; };
+		0642D2B72498CB8D000EBD62 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2B62498CB8D000EBD62 /* FoodModel.swift */; };
+		0642D2BA2498D089000EBD62 /* FoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2B92498D089000EBD62 /* FoodViewModel.swift */; };
+		0642D2BD2498DA2B000EBD62 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2BB2498DA2B000EBD62 /* FoodCell.swift */; };
+		0642D2BE2498DA2B000EBD62 /* FoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0642D2BC2498DA2B000EBD62 /* FoodCell.xib */; };
+		0642D2C0249A0476000EBD62 /* SellerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2BF249A0476000EBD62 /* SellerContentView.swift */; };
+		0642D2C6249B3CD5000EBD62 /* UserEvaluationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2C5249B3CD5000EBD62 /* UserEvaluationView.swift */; };
+		0642D2C8249B3E2A000EBD62 /* EvaluationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2C7249B3E2A000EBD62 /* EvaluationViewModel.swift */; };
+		0642D2CA249B3F75000EBD62 /* EvaluationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2C9249B3F75000EBD62 /* EvaluationHeaderView.swift */; };
+		0642D2CC249B3F85000EBD62 /* EvaluationHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0642D2CB249B3F85000EBD62 /* EvaluationHeaderView.xib */; };
+		0642D2CF249B431A000EBD62 /* EvaluationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2CD249B431A000EBD62 /* EvaluationCell.swift */; };
+		0642D2D0249B431A000EBD62 /* EvaluationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0642D2CE249B431A000EBD62 /* EvaluationCell.xib */; };
+		0642D2D2249B47AF000EBD62 /* EvalueMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2D1249B47AF000EBD62 /* EvalueMenuView.swift */; };
+		0642D2D4249B47BA000EBD62 /* EvalueMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0642D2D3249B47BA000EBD62 /* EvalueMenuView.xib */; };
+		0642D2D7249B53D4000EBD62 /* SellerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2D6249B53D4000EBD62 /* SellerDetailView.swift */; };
+		0642D2DA249B544A000EBD62 /* SellerDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2D9249B544A000EBD62 /* SellerDetailHeaderView.swift */; };
+		0642D2DC249B5458000EBD62 /* SellerDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0642D2DB249B5458000EBD62 /* SellerDetailHeaderView.xib */; };
+		0642D2DE249B5582000EBD62 /* SellerDetailFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2DD249B5582000EBD62 /* SellerDetailFooterView.swift */; };
+		0642D2E0249B558E000EBD62 /* SellerDetailFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0642D2DF249B558E000EBD62 /* SellerDetailFooterView.xib */; };
 		065085692490C00D00D52AA7 /* NearbyStallOwnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065085672490C00D00D52AA7 /* NearbyStallOwnerCell.swift */; };
 		0650856A2490C00D00D52AA7 /* NearbyStallOwnerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 065085682490C00D00D52AA7 /* NearbyStallOwnerCell.xib */; };
 		0655429E248F383F000CDFA5 /* Home2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0655429D248F383F000CDFA5 /* Home2ViewController.swift */; };
@@ -189,6 +209,27 @@
 		0642D2A9249784EE000EBD62 /* GoodsSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodsSectionHeader.xib; sourceTree = "<group>"; };
 		0642D2AB249787BB000EBD62 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		0642D2AC249787BB000EBD62 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		0642D2B02498BE03000EBD62 /* MTBaseRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBaseRefresh.m; sourceTree = "<group>"; };
+		0642D2B12498BE03000EBD62 /* MTBaseRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBaseRefresh.h; sourceTree = "<group>"; };
+		0642D2B32498C2A9000EBD62 /* Comm.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Comm.xcassets; sourceTree = "<group>"; };
+		0642D2B62498CB8D000EBD62 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		0642D2B92498D089000EBD62 /* FoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModel.swift; sourceTree = "<group>"; };
+		0642D2BB2498DA2B000EBD62 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		0642D2BC2498DA2B000EBD62 /* FoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCell.xib; sourceTree = "<group>"; };
+		0642D2BF249A0476000EBD62 /* SellerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerContentView.swift; sourceTree = "<group>"; };
+		0642D2C5249B3CD5000EBD62 /* UserEvaluationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEvaluationView.swift; sourceTree = "<group>"; };
+		0642D2C7249B3E2A000EBD62 /* EvaluationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationViewModel.swift; sourceTree = "<group>"; };
+		0642D2C9249B3F75000EBD62 /* EvaluationHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationHeaderView.swift; sourceTree = "<group>"; };
+		0642D2CB249B3F85000EBD62 /* EvaluationHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvaluationHeaderView.xib; sourceTree = "<group>"; };
+		0642D2CD249B431A000EBD62 /* EvaluationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationCell.swift; sourceTree = "<group>"; };
+		0642D2CE249B431A000EBD62 /* EvaluationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvaluationCell.xib; sourceTree = "<group>"; };
+		0642D2D1249B47AF000EBD62 /* EvalueMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvalueMenuView.swift; sourceTree = "<group>"; };
+		0642D2D3249B47BA000EBD62 /* EvalueMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvalueMenuView.xib; sourceTree = "<group>"; };
+		0642D2D6249B53D4000EBD62 /* SellerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerDetailView.swift; sourceTree = "<group>"; };
+		0642D2D9249B544A000EBD62 /* SellerDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerDetailHeaderView.swift; sourceTree = "<group>"; };
+		0642D2DB249B5458000EBD62 /* SellerDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SellerDetailHeaderView.xib; sourceTree = "<group>"; };
+		0642D2DD249B5582000EBD62 /* SellerDetailFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerDetailFooterView.swift; sourceTree = "<group>"; };
+		0642D2DF249B558E000EBD62 /* SellerDetailFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SellerDetailFooterView.xib; sourceTree = "<group>"; };
 		065085672490C00D00D52AA7 /* NearbyStallOwnerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyStallOwnerCell.swift; sourceTree = "<group>"; };
 		065085682490C00D00D52AA7 /* NearbyStallOwnerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NearbyStallOwnerCell.xib; sourceTree = "<group>"; };
 		0655429B248E4B13000CDFA5 /* BaiTanDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BaiTanDebug.entitlements; sourceTree = "<group>"; };
@@ -418,8 +459,12 @@
 		0642D29D24971C45000EBD62 /* 商品选择 */ = {
 			isa = PBXGroup;
 			children = (
-				0642D2A624973D46000EBD62 /* View */,
+				0642D2D5249B53B4000EBD62 /* 商家介绍 */,
+				0642D2C1249B3CA1000EBD62 /* 用户评价 */,
 				0642D2A0249728A1000EBD62 /* 选择商品 */,
+				0642D2B82498D076000EBD62 /* ViewModel */,
+				0642D2B52498CB6D000EBD62 /* Model */,
+				0642D2A624973D46000EBD62 /* View */,
 				0642D29E24971C87000EBD62 /* GoodsSelectionViewController.swift */,
 			);
 			path = "商品选择";
@@ -442,6 +487,9 @@
 				0642D2A9249784EE000EBD62 /* GoodsSectionHeader.xib */,
 				0642D2AB249787BB000EBD62 /* CategoryCell.swift */,
 				0642D2AC249787BB000EBD62 /* CategoryCell.xib */,
+				0642D2BB2498DA2B000EBD62 /* FoodCell.swift */,
+				0642D2BC2498DA2B000EBD62 /* FoodCell.xib */,
+				0642D2BF249A0476000EBD62 /* SellerContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -449,6 +497,90 @@
 		0642D2A624973D46000EBD62 /* View */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0642D2AF2498BE03000EBD62 /* BaseRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				0642D2B02498BE03000EBD62 /* MTBaseRefresh.m */,
+				0642D2B12498BE03000EBD62 /* MTBaseRefresh.h */,
+			);
+			path = BaseRefresh;
+			sourceTree = "<group>";
+		};
+		0642D2B52498CB6D000EBD62 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0642D2B62498CB8D000EBD62 /* FoodModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0642D2B82498D076000EBD62 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0642D2B92498D089000EBD62 /* FoodViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0642D2C1249B3CA1000EBD62 /* 用户评价 */ = {
+			isa = PBXGroup;
+			children = (
+				0642D2C4249B3CBA000EBD62 /* View */,
+				0642D2C5249B3CD5000EBD62 /* UserEvaluationView.swift */,
+				0642D2C3249B3CB5000EBD62 /* Model */,
+				0642D2C2249B3CAD000EBD62 /* ViewModel */,
+			);
+			path = "用户评价";
+			sourceTree = "<group>";
+		};
+		0642D2C2249B3CAD000EBD62 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0642D2C7249B3E2A000EBD62 /* EvaluationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0642D2C3249B3CB5000EBD62 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0642D2C4249B3CBA000EBD62 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0642D2C9249B3F75000EBD62 /* EvaluationHeaderView.swift */,
+				0642D2CB249B3F85000EBD62 /* EvaluationHeaderView.xib */,
+				0642D2CD249B431A000EBD62 /* EvaluationCell.swift */,
+				0642D2CE249B431A000EBD62 /* EvaluationCell.xib */,
+				0642D2D1249B47AF000EBD62 /* EvalueMenuView.swift */,
+				0642D2D3249B47BA000EBD62 /* EvalueMenuView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0642D2D5249B53B4000EBD62 /* 商家介绍 */ = {
+			isa = PBXGroup;
+			children = (
+				0642D2D8249B5438000EBD62 /* View */,
+				0642D2D6249B53D4000EBD62 /* SellerDetailView.swift */,
+			);
+			path = "商家介绍";
+			sourceTree = "<group>";
+		};
+		0642D2D8249B5438000EBD62 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0642D2D9249B544A000EBD62 /* SellerDetailHeaderView.swift */,
+				0642D2DB249B5458000EBD62 /* SellerDetailHeaderView.xib */,
+				0642D2DD249B5582000EBD62 /* SellerDetailFooterView.swift */,
+				0642D2DF249B558E000EBD62 /* SellerDetailFooterView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -586,6 +718,7 @@
 		06B6B243248B5A5700AE2A55 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				0642D2AF2498BE03000EBD62 /* BaseRefresh */,
 				06425C54249448EF00C7F98B /* QCListView */,
 				06B6B245248B5A5700AE2A55 /* BaseNav */,
 				06425C53249448D800C7F98B /* Tabbar */,
@@ -754,6 +887,7 @@
 		06B6B293248B5A5800AE2A55 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				0642D2B32498C2A9000EBD62 /* Comm.xcassets */,
 				06B6B294248B5A5800AE2A55 /* CityData.plist */,
 			);
 			path = Resource;
@@ -1128,18 +1262,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				06B6B53E248C771000AE2A55 /* Loading_6@2x.tiff in Resources */,
+				0642D2D4249B47BA000EBD62 /* EvalueMenuView.xib in Resources */,
 				06B6B353248B68C300AE2A55 /* MJRefresh.bundle in Resources */,
+				0642D2E0249B558E000EBD62 /* SellerDetailFooterView.xib in Resources */,
 				06B6B53F248C771000AE2A55 /* Loading_3@2x.tiff in Resources */,
 				06618C47248B587400F12D72 /* LaunchScreen.storyboard in Resources */,
 				06B6B53D248C771000AE2A55 /* Loading_7@2x.tiff in Resources */,
 				0642D2AA249784EE000EBD62 /* GoodsSectionHeader.xib in Resources */,
 				0650856A2490C00D00D52AA7 /* NearbyStallOwnerCell.xib in Resources */,
 				06B6B524248C58C100AE2A55 /* GoodsCell.xib in Resources */,
+				0642D2DC249B5458000EBD62 /* SellerDetailHeaderView.xib in Resources */,
+				0642D2D0249B431A000EBD62 /* EvaluationCell.xib in Resources */,
 				06B6B53C248C771000AE2A55 /* Loading_5@2x.tiff in Resources */,
+				0642D2CC249B3F85000EBD62 /* EvaluationHeaderView.xib in Resources */,
 				06B6B53B248C771000AE2A55 /* Loading_4@2x.tiff in Resources */,
 				06B6B367248B691300AE2A55 /* JYHomeNavView.xib in Resources */,
 				06B6B52A248C6D6100AE2A55 /* MarqueeView.xib in Resources */,
 				06B6B541248C771000AE2A55 /* Loading_1@2x.tiff in Resources */,
+				0642D2B42498C2A9000EBD62 /* Comm.xcassets in Resources */,
 				06618C44248B587400F12D72 /* Assets.xcassets in Resources */,
 				0642D2AE249787BB000EBD62 /* CategoryCell.xib in Resources */,
 				06B6B2FF248B5A5800AE2A55 /* CityData.plist in Resources */,
@@ -1148,6 +1288,7 @@
 				06B6B540248C771000AE2A55 /* Loading_2@2x.tiff in Resources */,
 				06425C1424918C9B00C7F98B /* XRPlaceholder.png in Resources */,
 				06B6B542248C771000AE2A55 /* Loading_8@2x.tiff in Resources */,
+				0642D2BE2498DA2B000EBD62 /* FoodCell.xib in Resources */,
 				06425C2024920CAD00C7F98B /* FilterBestCell.xib in Resources */,
 				06618C42248B587400F12D72 /* Main.storyboard in Resources */,
 			);
@@ -1220,6 +1361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06B6B2D2248B5A5800AE2A55 /* UIButton+ImageTitleSpacing.swift in Sources */,
+				0642D2D2249B47AF000EBD62 /* EvalueMenuView.swift in Sources */,
 				06B6B2E2248B5A5800AE2A55 /* AlertManager.swift in Sources */,
 				06B6B35E248B68C300AE2A55 /* MJRefreshStateHeader.m in Sources */,
 				06425C2624922DDB00C7F98B /* FilterVelocityView.swift in Sources */,
@@ -1227,6 +1369,7 @@
 				06B6B2C8248B5A5800AE2A55 /* LoadViewManager.swift in Sources */,
 				06425C24249227A100C7F98B /* FilterBackgroundView.swift in Sources */,
 				06425C1F24920CAD00C7F98B /* FilterBestCell.swift in Sources */,
+				0642D2B72498CB8D000EBD62 /* FoodModel.swift in Sources */,
 				06B6B3E5248B968500AE2A55 /* FindGoodsView.swift in Sources */,
 				06B6B364248B68C300AE2A55 /* MJRefreshComponent.m in Sources */,
 				06B6B356248B68C300AE2A55 /* UIView+MJExtension.m in Sources */,
@@ -1237,11 +1380,14 @@
 				06B6B305248B62AB00AE2A55 /* BouncesContentView.swift in Sources */,
 				06B6B2D3248B5A5800AE2A55 /* ArrayExtension.swift in Sources */,
 				06B6B2EC248B5A5800AE2A55 /* UIView+TYAlertView.m in Sources */,
+				0642D2CA249B3F75000EBD62 /* EvaluationHeaderView.swift in Sources */,
 				06B6B354248B68C300AE2A55 /* UIScrollView+MJExtension.m in Sources */,
 				06B6B2D5248B5A5800AE2A55 /* ImageExtension.swift in Sources */,
 				0655429E248F383F000CDFA5 /* Home2ViewController.swift in Sources */,
 				06B6B35A248B68C300AE2A55 /* MJRefreshAutoStateFooter.m in Sources */,
+				0642D2BA2498D089000EBD62 /* FoodViewModel.swift in Sources */,
 				06425C2824923F8500C7F98B /* FilterBestModel.swift in Sources */,
+				0642D2CF249B431A000EBD62 /* EvaluationCell.swift in Sources */,
 				06B6B303248B618C00AE2A55 /* IrregularityContentView.swift in Sources */,
 				06B6B2F1248B5A5800AE2A55 /* TYAlertDropDownAnimation.m in Sources */,
 				06B6B2ED248B5A5800AE2A55 /* TYAlertScaleFadeAnimation.m in Sources */,
@@ -1251,8 +1397,10 @@
 				06B6B2E6248B5A5800AE2A55 /* YQCAlertContentView.swift in Sources */,
 				0642D2A8249784D2000EBD62 /* GoodsSectionHeader.swift in Sources */,
 				06B6B2C5248B5A5800AE2A55 /* RequestUtil.swift in Sources */,
+				0642D2DE249B5582000EBD62 /* SellerDetailFooterView.swift in Sources */,
 				06B6B2C9248B5A5800AE2A55 /* JLabel.swift in Sources */,
 				06B6B2DD248B5A5800AE2A55 /* StringExtension.swift in Sources */,
+				0642D2D7249B53D4000EBD62 /* SellerDetailView.swift in Sources */,
 				06B6B52D248C6DA100AE2A55 /* JJMarqueeView.swift in Sources */,
 				06B6B3EC248B9C2500AE2A55 /* QCCollectionViewExtension.swift in Sources */,
 				06B6B35C248B68C300AE2A55 /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -1268,11 +1416,13 @@
 				06B6B2CD248B5A5800AE2A55 /* MainNavigationController.swift in Sources */,
 				06B6B2F0248B5A5800AE2A55 /* UIView+TYAutoLayout.m in Sources */,
 				06B6B35F248B68C300AE2A55 /* MJRefreshGifHeader.m in Sources */,
+				0642D2DA249B544A000EBD62 /* SellerDetailHeaderView.swift in Sources */,
 				06425C1A2491EC4800C7F98B /* CustomFilterBtn.swift in Sources */,
 				06B6B2E4248B5A5800AE2A55 /* CustomAlertView.swift in Sources */,
 				06B6B31A248B665700AE2A55 /* ShoppingCartViewController.swift in Sources */,
 				06B6B2CB248B5A5800AE2A55 /* UtilTool.swift in Sources */,
 				065542A0248F3D7E000CDFA5 /* HomeHeaderView.swift in Sources */,
+				0642D2C8249B3E2A000EBD62 /* EvaluationViewModel.swift in Sources */,
 				06B6B2F3248B5A5800AE2A55 /* TYBaseAnimation.m in Sources */,
 				06B6B1F4248B5A3700AE2A55 /* Global.swift in Sources */,
 				06B6B50E248BB55500AE2A55 /* GoodsHeaderView.swift in Sources */,
@@ -1284,6 +1434,7 @@
 				06B6B351248B68C300AE2A55 /* UIScrollView+MJRefresh.m in Sources */,
 				06B6B514248BDAC700AE2A55 /* NearbyStallOwnerView.swift in Sources */,
 				06B6B2EA248B5A5800AE2A55 /* UIImage+ImageEffects.m in Sources */,
+				0642D2B22498BE03000EBD62 /* MTBaseRefresh.m in Sources */,
 				06B6B2EF248B5A5800AE2A55 /* TYAlertController+TransitionAnimate.m in Sources */,
 				0642D2A2249728C6000EBD62 /* ChooseGoodsView.swift in Sources */,
 				06B6B35B248B68C300AE2A55 /* MJRefreshAutoGifFooter.m in Sources */,
@@ -1293,11 +1444,13 @@
 				06B6B2C7248B5A5800AE2A55 /* AccountManager.swift in Sources */,
 				06B6B2E9248B5A5800AE2A55 /* TYAlertController+BlurEffects.m in Sources */,
 				06B6B2E5248B5A5800AE2A55 /* YQCAlertView.swift in Sources */,
+				0642D2C0249A0476000EBD62 /* SellerContentView.swift in Sources */,
 				06B6B3DC248B8E9E00AE2A55 /* BaseTableView.swift in Sources */,
 				06618C3D248B587400F12D72 /* AppDelegate.swift in Sources */,
 				06B6B51C248BF04900AE2A55 /* HomeNaviView.swift in Sources */,
 				06B6B314248B661C00AE2A55 /* MessageViewController.swift in Sources */,
 				06B6B2CA248B5A5800AE2A55 /* SweetAlert.swift in Sources */,
+				0642D2BD2498DA2B000EBD62 /* FoodCell.swift in Sources */,
 				06B6B51E248C476100AE2A55 /* BigCornerView.swift in Sources */,
 				06B6B2DF248B5A5800AE2A55 /* DictionaryExtension.swift in Sources */,
 				06425C52249399FD00C7F98B /* FilterAllView.swift in Sources */,
@@ -1323,6 +1476,7 @@
 				06B6B520248C485400AE2A55 /* NearbyDynamicsHeaderView.swift in Sources */,
 				06425C502493892500C7F98B /* CategoryFilterView.swift in Sources */,
 				06B6B2EB248B5A5800AE2A55 /* TYAlertView.m in Sources */,
+				0642D2C6249B3CD5000EBD62 /* UserEvaluationView.swift in Sources */,
 				0642D2A524973159000EBD62 /* GoodsSelectionHeaderView.swift in Sources */,
 				06B6B2D9248B5A5800AE2A55 /* ColorExtension.swift in Sources */,
 				06B6B368248B691300AE2A55 /* JYHomeNavView.swift in Sources */,

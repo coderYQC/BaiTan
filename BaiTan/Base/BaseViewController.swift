@@ -138,7 +138,7 @@ open class BaseViewController: UIViewController {
     deinit {
         NotificationCenter.default.removeObserver(self)
 //        kNotificationCenter.removeAllNotication(self)
-        JPrint(msg: "\(self)释放VC,页面销毁")
+//        JPrint(msg: "\(self)释放VC,页面销毁")
     }
      
     func findHairlineImageViewUnder(sView: UIView) ->UIImageView {
