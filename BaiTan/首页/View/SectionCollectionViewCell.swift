@@ -105,6 +105,9 @@ class SectionCollectionViewCell: UICollectionViewCell{
                 self.leftCellCanScroll = false
                 scrollView.contentOffset = CGPoint(x: 0, y: 0)
                 NotificationCenter.default.post(name: Notification.Name("leaveTop2"), object: nil)
+                if self.leftScrollView?.contentOffset != .zero {
+                    self.leftScrollView?.contentOffset = .zero
+                }
             } 
         }
     }

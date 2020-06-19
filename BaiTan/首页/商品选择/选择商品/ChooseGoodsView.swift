@@ -46,6 +46,9 @@ class ChooseGoodsView: SectionCollectionViewCell {
                     self?.mainTableView?.setContentOffset(CGPoint(x: 0, y: kChooseGoodsFix - Constants.statusBarHeight), animated: true)
                 }
                 self!.isTapLeftCell = true
+                
+                self?.lastTopHeaderViewSection = indexPath.row
+                
 //                self?.categoryTableView.tableView.scrollToRow(at: IndexPath(row: indexPath.row, section: 0), at: .middle, animated: false)
 //
                 self?.goodsTableView.tableView.scrollToRow(at: IndexPath(row: 0, section: indexPath.row), at: .top, animated: true)
@@ -97,12 +100,14 @@ class ChooseGoodsView: SectionCollectionViewCell {
                 }
                 self?.handleScrollViewOffsetWithTwoScrollViews(scrollView: scrollView)
             })
-            .willEndDragging({[weak self] (_, _, _) in
-                if self!.isTapLeftCell {
-                    self?.isTapLeftCell = false
-                }
+            .didEndDragging({[weak self] (_, _) in
+//                if self!.isTapLeftCell {
+//                    self?.isTapLeftCell = false
+//                    self?.scrollowLeftTable()
+//                }
+                self?.scrollowLeftTable()
             })
-            .didEndScroll({ (_, _) in
+            .didEndScroll({[weak self] (_, _) in
                 print("右侧停止滚动了")
             })
             .backgroundColor(Constants.APP_BACKGROUND_COLOR)
@@ -132,7 +137,6 @@ class ChooseGoodsView: SectionCollectionViewCell {
                 self.categoryTableView.tableView.selectRow(at: IndexPath(row: topHeaderViewSection, section: 0), animated: false, scrollPosition: .middle)
                 self.isRightScrollToIndex = false
             }
-            
             lastTopHeaderViewSection = topHeaderViewSection
         } 
     }

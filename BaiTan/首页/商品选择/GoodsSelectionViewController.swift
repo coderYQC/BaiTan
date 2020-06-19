@@ -259,9 +259,14 @@ extension GoodsSelectionViewController:UITableViewDelegate,UITableViewDataSource
                                 
                                  print("===================")
                                 self.tableHeaderView.segmentHeaderView.backgroundColor = UIColor(white: 1, alpha: 1)
+                                
                                  if self.vcCanScroll == false {
                                      myTableView.contentOffset =  CGPoint(x: 0, y: kChooseGoodsFix - Constants.statusBarHeight)
                                  }
+                                
+//                                if self.chooseGoodsCell?.leftScrollView?.contentOffset != .zero {
+//                                    self.chooseGoodsCell?.leftScrollView?.setContentOffset(.zero, animated: true)
+//                                }
                             }
                         }
                     }
@@ -343,17 +348,17 @@ extension GoodsSelectionViewController:UITableViewDelegate,UITableViewDataSource
               
         handleScrollable()
         
-            if scrollView == self.myTableView {
-                let scrollToScrollStop = !scrollView.isTracking && !scrollView.isDragging && !scrollView.isDecelerating
-                if (scrollToScrollStop) {
-                   scrollViewDidEndScroll()
-                }
+        if scrollView == self.myTableView {
+            let scrollToScrollStop = !scrollView.isTracking && !scrollView.isDragging && !scrollView.isDecelerating
+            if (scrollToScrollStop) {
+               scrollViewDidEndScroll()
             }
-         
+        }
+//        print("scrollViewDidEndDragging")
+        
         if scrollView == self.myTableView {
             if scrollView.contentOffset.y + Constants.statusBarHeight < -100 {
                 isAutoSetOffsetY = true
-                print("111111111111111")
                 self.curTableViewOffsetY = self.myTableView.contentOffset.y
                 DispatchQueue.main.async {
                     self.myTableView.setContentOffset(CGPoint(x: 0, y: -kGoodsSelectionCollectionViewH), animated: true)
@@ -372,6 +377,7 @@ extension GoodsSelectionViewController:UITableViewDelegate,UITableViewDataSource
                self.tableHeaderView.setCurSelBtn(index: selTitleBtnIndex)
             }
   
+        print("scrollViewDidEndScrollingAnimation")
         handleScrollable()
            
         }
