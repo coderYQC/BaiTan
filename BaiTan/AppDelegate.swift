@@ -32,8 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate {
            JPrint(msg:"manager start failed!")
         }
         self.window?.rootViewController = MainProvider.customAnimateRemindStyle(implies: false)
-        
-       
+         
         
         return true
     }

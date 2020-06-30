@@ -67,7 +67,7 @@ class SectionCollectionViewCell: UICollectionViewCell{
         if scrollView == self.leftScrollView {
              
             if !self.isRightScrollToIndex {
-                print("11111111111111")
+//                print("11111111111111")
                 //左侧滑动，停止右侧滑动
                 if lockRightScroll == false || lockLeftScroll == true {
                    self.scrollView!.setContentOffset(self.scrollView!.contentOffset, animated: false)
@@ -87,7 +87,7 @@ class SectionCollectionViewCell: UICollectionViewCell{
         }else{
             //右侧滑动，停止左侧滑动
             if !self.isRightScrollToIndex  {//如果不是让左侧scrollView滚动到指定索引
-                print("222222222222222222")
+//                print("222222222222222222")
                 if lockRightScroll == true  || lockLeftScroll == false {//锁左侧scrollView
                     self.leftScrollView!.setContentOffset(leftScrollView!.contentOffset, animated: false)
                     lockLeftScroll = true

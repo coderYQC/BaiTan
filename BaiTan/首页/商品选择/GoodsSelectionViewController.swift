@@ -19,7 +19,7 @@ let kGoodsSelectionTableHeaderViewH:CGFloat = 300 + Constants.fixNaviBarHeight
 let kChooseGoodsFix:CGFloat = kGoodsSelectionTableHeaderViewH - kGoodsSelectionSegmentH - Constants.naviBarHeight
  
 let kSellerContetnViewH:CGFloat = kGoodsSelectionTableViewH - (78 + Constants.statusBarHeight) - (70 + Constants.fixTabbarHeight)
-
+let kSellerContentViewTop:CGFloat = 78 + Constants.statusBarHeight
 class GoodsSelectionViewController: BaseViewController {
     var vcCanScroll = true
     var curContentCell:SectionCollectionViewCell!
@@ -102,10 +102,9 @@ class GoodsSelectionViewController: BaseViewController {
         }
         return naviBar
     }()
-   
     
     lazy var sellerContentView:SellerContentView = {
-        let view = SellerContentView(frame: CGRect(x: 10, y: 78 + Constants.statusBarHeight, width: JWidth - 20, height: kSellerContetnViewH))
+        let view = SellerContentView(frame: CGRect(x: 10, y: kSellerContentViewTop, width: JWidth - 20, height: kSellerContetnViewH))
              
         view.upBtn.addTap {[weak self] (_) in
             self?.myTableView.setContentOffset(CGPoint(x: 0, y: -Constants.statusBarHeight), animated: true)
@@ -141,6 +140,8 @@ class GoodsSelectionViewController: BaseViewController {
          
         self.view.addSubview(self.minusBtn)
         self.view.addSubview(self.packageView)
+         
+        self.tz_addPopGesture(to: self.collectionView1)
         
         kNotificationCenter.addObserver(forName: NSNotification.Name(rawValue: "leaveTop2"), object: nil, queue: nil) {[weak self] (noti) in
                   
@@ -149,7 +150,7 @@ class GoodsSelectionViewController: BaseViewController {
             if self?.curContentCell != nil {
                 self?.curContentCell.cellCanScroll = false
             }
-            print("+++++++++++++++++")
+//            print("+++++++++++++++++")
         }
         
         kNotificationCenter.addObserver(forName: NSNotification.Name(rawValue: "leaveTop3"), object: nil, queue: nil) {[weak self] (noti) in
@@ -221,6 +222,7 @@ extension GoodsSelectionViewController:UITableViewDelegate,UITableViewDataSource
         return cell!
     } 
      func scrollViewDidScroll(_ scrollView: UIScrollView) {
+           
          
             let offsetY = -(myTableView.contentOffset.y + Constants.statusBarHeight)
    
@@ -232,7 +234,7 @@ extension GoodsSelectionViewController:UITableViewDelegate,UITableViewDataSource
                    resetTableviewContentOffsetY()
                 }
             } else {
-                 print("*****************")
+//                 print("*****************")
                 if scrollView == myTableView {
                     if isDismiss {//滑动返回时，禁止滑动
                         myTableView.contentOffset = CGPoint(x: 0, y: curTableViewOffsetY)
@@ -244,7 +246,7 @@ extension GoodsSelectionViewController:UITableViewDelegate,UITableViewDataSource
                         }else{
                             
                             if -offsetY >= kChooseGoodsFix {
-                                print("--------------------")
+//                                print("--------------------")
                                 //滑到顶端
                                 myTableView.contentOffset = CGPoint(x: 0, y: kChooseGoodsFix - Constants.statusBarHeight)
                                 self.tableHeaderView.segmentHeaderView.backgroundColor = UIColor(white: 0.97, alpha: 1)
@@ -257,7 +259,7 @@ extension GoodsSelectionViewController:UITableViewDelegate,UITableViewDataSource
                                 }
                             } else { //脱离顶端
                                 
-                                 print("===================")
+//                                 print("===================")
                                 self.tableHeaderView.segmentHeaderView.backgroundColor = UIColor(white: 1, alpha: 1)
                                 
                                  if self.vcCanScroll == false {
@@ -308,6 +310,20 @@ extension GoodsSelectionViewController:UITableViewDelegate,UITableViewDataSource
             self.sellerContentView.sellerNameLab.alpha = 0
         }else {
             self.sellerContentView.sellerNameLab.alpha = 1
+        }
+        
+        if -offsetY < 0 {
+            self.sellerView.top = 0
+            self.bottomBGView.top = self.sellerView.bottom
+            self.sellerContentView.top = kSellerContentViewTop
+        }else if -offsetY >= kChooseGoodsFix {//滑到顶端
+            self.sellerView.top = -kChooseGoodsFix
+            self.bottomBGView.top = self.sellerView.bottom
+            self.sellerContentView.top = kSellerContentViewTop - kChooseGoodsFix
+        }else{
+            self.sellerView.top = offsetY
+            self.bottomBGView.top = self.sellerView.bottom
+            self.sellerContentView.top = kSellerContentViewTop + offsetY
         }
         
     }

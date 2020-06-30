@@ -47,14 +47,20 @@
 		0642D2DC249B5458000EBD62 /* SellerDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0642D2DB249B5458000EBD62 /* SellerDetailHeaderView.xib */; };
 		0642D2DE249B5582000EBD62 /* SellerDetailFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2DD249B5582000EBD62 /* SellerDetailFooterView.swift */; };
 		0642D2E0249B558E000EBD62 /* SellerDetailFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0642D2DF249B558E000EBD62 /* SellerDetailFooterView.xib */; };
+		0642D2E4249C6C41000EBD62 /* FoodChooseContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2E2249C6C41000EBD62 /* FoodChooseContentCell.swift */; };
+		0642D2E5249C6C41000EBD62 /* FoodChooseContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0642D2E3249C6C41000EBD62 /* FoodChooseContentCell.xib */; };
+		0642D2E8249E07F7000EBD62 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2E7249E07F7000EBD62 /* TestViewController.swift */; };
+		0642D2EA249E0929000EBD62 /* BaseScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642D2E9249E0929000EBD62 /* BaseScrollView.swift */; };
 		065085692490C00D00D52AA7 /* NearbyStallOwnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065085672490C00D00D52AA7 /* NearbyStallOwnerCell.swift */; };
 		0650856A2490C00D00D52AA7 /* NearbyStallOwnerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 065085682490C00D00D52AA7 /* NearbyStallOwnerCell.xib */; };
 		0655429E248F383F000CDFA5 /* Home2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0655429D248F383F000CDFA5 /* Home2ViewController.swift */; };
 		065542A0248F3D7E000CDFA5 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0655429F248F3D7E000CDFA5 /* HomeHeaderView.swift */; };
 		06618C3D248B587400F12D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06618C3C248B587400F12D72 /* AppDelegate.swift */; };
-		06618C42248B587400F12D72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06618C40248B587400F12D72 /* Main.storyboard */; };
 		06618C44248B587400F12D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06618C43248B587400F12D72 /* Assets.xcassets */; };
 		06618C47248B587400F12D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06618C45248B587400F12D72 /* LaunchScreen.storyboard */; };
+		0680443E24AA07F100918297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0680443D24AA07F100918297 /* Main.storyboard */; };
+		0680443F24AACE7500918297 /* Pods_BaiTan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C51E62A03406DBC10D0BCB /* Pods_BaiTan.framework */; };
+		0680444024AACE7500918297 /* Pods_BaiTan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28C51E62A03406DBC10D0BCB /* Pods_BaiTan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		06B6B1F3248B5A3700AE2A55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B6B1EE248B5A3600AE2A55 /* Constants.swift */; };
 		06B6B1F4248B5A3700AE2A55 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B6B1EF248B5A3600AE2A55 /* Global.swift */; };
 		06B6B1F5248B5A3700AE2A55 /* NotificationConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B6B1F0248B5A3600AE2A55 /* NotificationConst.swift */; };
@@ -170,7 +176,7 @@
 		06B6B540248C771000AE2A55 /* Loading_2@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06B6B538248C771000AE2A55 /* Loading_2@2x.tiff */; };
 		06B6B541248C771000AE2A55 /* Loading_1@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06B6B539248C771000AE2A55 /* Loading_1@2x.tiff */; };
 		06B6B542248C771000AE2A55 /* Loading_8@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 06B6B53A248C771000AE2A55 /* Loading_8@2x.tiff */; };
-		139575758290749BE6345A29 /* Pods_BaiTan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C51E62A03406DBC10D0BCB /* Pods_BaiTan.framework */; };
+		06E05A0B24A9DBFF00D83AD7 /* UINavigationController+TZPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E05A0924A9DBFF00D83AD7 /* UINavigationController+TZPopGesture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -181,6 +187,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				06B6B3E7248B980600AE2A55 /* YQCKit.framework in Embed Frameworks */,
+				0680444024AACE7500918297 /* Pods_BaiTan.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +237,10 @@
 		0642D2DB249B5458000EBD62 /* SellerDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SellerDetailHeaderView.xib; sourceTree = "<group>"; };
 		0642D2DD249B5582000EBD62 /* SellerDetailFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerDetailFooterView.swift; sourceTree = "<group>"; };
 		0642D2DF249B558E000EBD62 /* SellerDetailFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SellerDetailFooterView.xib; sourceTree = "<group>"; };
+		0642D2E2249C6C41000EBD62 /* FoodChooseContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodChooseContentCell.swift; sourceTree = "<group>"; };
+		0642D2E3249C6C41000EBD62 /* FoodChooseContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodChooseContentCell.xib; sourceTree = "<group>"; };
+		0642D2E7249E07F7000EBD62 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		0642D2E9249E0929000EBD62 /* BaseScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScrollView.swift; sourceTree = "<group>"; };
 		065085672490C00D00D52AA7 /* NearbyStallOwnerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyStallOwnerCell.swift; sourceTree = "<group>"; };
 		065085682490C00D00D52AA7 /* NearbyStallOwnerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NearbyStallOwnerCell.xib; sourceTree = "<group>"; };
 		0655429B248E4B13000CDFA5 /* BaiTanDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BaiTanDebug.entitlements; sourceTree = "<group>"; };
@@ -238,10 +249,10 @@
 		0655429F248F3D7E000CDFA5 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		06618C39248B587400F12D72 /* BaiTan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06618C3C248B587400F12D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		06618C41248B587400F12D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06618C43248B587400F12D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06618C46248B587400F12D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06618C48248B587400F12D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0680443D24AA07F100918297 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		06B6B1EE248B5A3600AE2A55 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Global/Constants.swift; sourceTree = "<group>"; };
 		06B6B1EF248B5A3600AE2A55 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		06B6B1F0248B5A3600AE2A55 /* NotificationConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationConst.swift; sourceTree = "<group>"; };
@@ -392,6 +403,8 @@
 		06B6B538248C771000AE2A55 /* Loading_2@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Loading_2@2x.tiff"; sourceTree = "<group>"; };
 		06B6B539248C771000AE2A55 /* Loading_1@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Loading_1@2x.tiff"; sourceTree = "<group>"; };
 		06B6B53A248C771000AE2A55 /* Loading_8@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Loading_8@2x.tiff"; sourceTree = "<group>"; };
+		06E05A0924A9DBFF00D83AD7 /* UINavigationController+TZPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+TZPopGesture.m"; sourceTree = "<group>"; };
+		06E05A0A24A9DBFF00D83AD7 /* UINavigationController+TZPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+TZPopGesture.h"; sourceTree = "<group>"; };
 		0D23A2F9C54CC6BB7E744EDA /* Pods-BaiTan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiTan.debug.xcconfig"; path = "Target Support Files/Pods-BaiTan/Pods-BaiTan.debug.xcconfig"; sourceTree = "<group>"; };
 		130337127B17D87018F216CB /* Pods-BaiTan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiTan.release.xcconfig"; path = "Target Support Files/Pods-BaiTan/Pods-BaiTan.release.xcconfig"; sourceTree = "<group>"; };
 		28C51E62A03406DBC10D0BCB /* Pods_BaiTan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaiTan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -402,8 +415,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				139575758290749BE6345A29 /* Pods_BaiTan.framework in Frameworks */,
 				06B6B3E6248B980600AE2A55 /* YQCKit.framework in Frameworks */,
+				0680443F24AACE7500918297 /* Pods_BaiTan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,12 +590,31 @@
 		0642D2D8249B5438000EBD62 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0642D2E1249C6C0F000EBD62 /* 商品选择 */,
 				0642D2D9249B544A000EBD62 /* SellerDetailHeaderView.swift */,
 				0642D2DB249B5458000EBD62 /* SellerDetailHeaderView.xib */,
 				0642D2DD249B5582000EBD62 /* SellerDetailFooterView.swift */,
 				0642D2DF249B558E000EBD62 /* SellerDetailFooterView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0642D2E1249C6C0F000EBD62 /* 商品选择 */ = {
+			isa = PBXGroup;
+			children = (
+				0642D2E2249C6C41000EBD62 /* FoodChooseContentCell.swift */,
+				0642D2E3249C6C41000EBD62 /* FoodChooseContentCell.xib */,
+			);
+			path = "商品选择";
+			sourceTree = "<group>";
+		};
+		0642D2E6249E07DA000EBD62 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				0642D2E7249E07F7000EBD62 /* TestViewController.swift */,
+				0642D2E9249E0929000EBD62 /* BaseScrollView.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		065085632490BF7700D52AA7 /* 附近摊主 */ = {
@@ -664,7 +696,7 @@
 				06B6B292248B5A5800AE2A55 /* Vendor */,
 				06B6B1ED248B5A3600AE2A55 /* Global */,
 				06618C3C248B587400F12D72 /* AppDelegate.swift */,
-				06618C40248B587400F12D72 /* Main.storyboard */,
+				0680443D24AA07F100918297 /* Main.storyboard */,
 				06618C43248B587400F12D72 /* Assets.xcassets */,
 				06618C45248B587400F12D72 /* LaunchScreen.storyboard */,
 				06618C48248B587400F12D72 /* Info.plist */,
@@ -755,6 +787,7 @@
 		06B6B24A248B5A5700AE2A55 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				06E05A0824A9DBFF00D83AD7 /* TZScrollViewPopGesture */,
 				06B6B24B248B5A5700AE2A55 /* UIImageViewExtension.swift */,
 				06B6B24C248B5A5700AE2A55 /* BarButtomItenExtension.swift */,
 				06B6B24D248B5A5700AE2A55 /* NSObjectExtension.swift */,
@@ -896,6 +929,7 @@
 		06B6B308248B656900AE2A55 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				0642D2E6249E07DA000EBD62 /* Test */,
 				0642D29D24971C45000EBD62 /* 商品选择 */,
 				065085632490BF7700D52AA7 /* 附近摊主 */,
 				06B6B510248BB6C400AE2A55 /* 发现好货 */,
@@ -1182,6 +1216,15 @@
 			path = gifImages;
 			sourceTree = "<group>";
 		};
+		06E05A0824A9DBFF00D83AD7 /* TZScrollViewPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				06E05A0924A9DBFF00D83AD7 /* UINavigationController+TZPopGesture.m */,
+				06E05A0A24A9DBFF00D83AD7 /* UINavigationController+TZPopGesture.h */,
+			);
+			path = TZScrollViewPopGesture;
+			sourceTree = "<group>";
+		};
 		CD221F5CE82D2916BFDDAB18 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1275,6 +1318,7 @@
 				0642D2D0249B431A000EBD62 /* EvaluationCell.xib in Resources */,
 				06B6B53C248C771000AE2A55 /* Loading_5@2x.tiff in Resources */,
 				0642D2CC249B3F85000EBD62 /* EvaluationHeaderView.xib in Resources */,
+				0642D2E5249C6C41000EBD62 /* FoodChooseContentCell.xib in Resources */,
 				06B6B53B248C771000AE2A55 /* Loading_4@2x.tiff in Resources */,
 				06B6B367248B691300AE2A55 /* JYHomeNavView.xib in Resources */,
 				06B6B52A248C6D6100AE2A55 /* MarqueeView.xib in Resources */,
@@ -1289,8 +1333,8 @@
 				06425C1424918C9B00C7F98B /* XRPlaceholder.png in Resources */,
 				06B6B542248C771000AE2A55 /* Loading_8@2x.tiff in Resources */,
 				0642D2BE2498DA2B000EBD62 /* FoodCell.xib in Resources */,
+				0680443E24AA07F100918297 /* Main.storyboard in Resources */,
 				06425C2024920CAD00C7F98B /* FilterBestCell.xib in Resources */,
-				06618C42248B587400F12D72 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1366,6 +1410,7 @@
 				06B6B35E248B68C300AE2A55 /* MJRefreshStateHeader.m in Sources */,
 				06425C2624922DDB00C7F98B /* FilterVelocityView.swift in Sources */,
 				06B6B1F7248B5A3700AE2A55 /* SingleClass.swift in Sources */,
+				0642D2E4249C6C41000EBD62 /* FoodChooseContentCell.swift in Sources */,
 				06B6B2C8248B5A5800AE2A55 /* LoadViewManager.swift in Sources */,
 				06425C24249227A100C7F98B /* FilterBackgroundView.swift in Sources */,
 				06425C1F24920CAD00C7F98B /* FilterBestCell.swift in Sources */,
@@ -1385,6 +1430,7 @@
 				06B6B2D5248B5A5800AE2A55 /* ImageExtension.swift in Sources */,
 				0655429E248F383F000CDFA5 /* Home2ViewController.swift in Sources */,
 				06B6B35A248B68C300AE2A55 /* MJRefreshAutoStateFooter.m in Sources */,
+				0642D2EA249E0929000EBD62 /* BaseScrollView.swift in Sources */,
 				0642D2BA2498D089000EBD62 /* FoodViewModel.swift in Sources */,
 				06425C2824923F8500C7F98B /* FilterBestModel.swift in Sources */,
 				0642D2CF249B431A000EBD62 /* EvaluationCell.swift in Sources */,
@@ -1402,6 +1448,7 @@
 				06B6B2DD248B5A5800AE2A55 /* StringExtension.swift in Sources */,
 				0642D2D7249B53D4000EBD62 /* SellerDetailView.swift in Sources */,
 				06B6B52D248C6DA100AE2A55 /* JJMarqueeView.swift in Sources */,
+				06E05A0B24A9DBFF00D83AD7 /* UINavigationController+TZPopGesture.m in Sources */,
 				06B6B3EC248B9C2500AE2A55 /* QCCollectionViewExtension.swift in Sources */,
 				06B6B35C248B68C300AE2A55 /* MJRefreshAutoNormalFooter.m in Sources */,
 				06B6B2EE248B5A5800AE2A55 /* TYAlertFadeAnimation.m in Sources */,
@@ -1436,6 +1483,7 @@
 				06B6B2EA248B5A5800AE2A55 /* UIImage+ImageEffects.m in Sources */,
 				0642D2B22498BE03000EBD62 /* MTBaseRefresh.m in Sources */,
 				06B6B2EF248B5A5800AE2A55 /* TYAlertController+TransitionAnimate.m in Sources */,
+				0642D2E8249E07F7000EBD62 /* TestViewController.swift in Sources */,
 				0642D2A2249728C6000EBD62 /* ChooseGoodsView.swift in Sources */,
 				06B6B35B248B68C300AE2A55 /* MJRefreshAutoGifFooter.m in Sources */,
 				06B6B2DA248B5A5800AE2A55 /* NSUserDefaults+Extension.swift in Sources */,
@@ -1497,14 +1545,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		06618C40248B587400F12D72 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06618C41248B587400F12D72 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		06618C45248B587400F12D72 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1637,6 +1677,7 @@
 			baseConfigurationReference = 0D23A2F9C54CC6BB7E744EDA /* Pods-BaiTan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = BaiTan/BaiTanDebug.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -1646,7 +1687,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				GCC_PREFIX_HEADER = /Users/yanqunchao/BaiTan/BaiTan/Configure/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BaiTan/Configure/PrefixHeader.pch";
 				INFOPLIST_FILE = BaiTan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1656,7 +1697,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yanqunchao.BaiTan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = bantanProfileDev;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yanqunchao/BaiTan/BaiTan/Configure/BaiTan-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yanqunchao/Documents/GitHub/BaiTan/BaiTan/Configure/BaiTan-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1667,6 +1708,7 @@
 			baseConfigurationReference = 130337127B17D87018F216CB /* Pods-BaiTan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = BaiTan/BaiTanRelease.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -1676,7 +1718,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				GCC_PREFIX_HEADER = /Users/yanqunchao/BaiTan/BaiTan/Configure/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BaiTan/Configure/PrefixHeader.pch";
 				INFOPLIST_FILE = BaiTan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1686,7 +1728,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yanqunchao.BaiTan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = bantanDevelopmentProfile;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yanqunchao/BaiTan/BaiTan/Configure/BaiTan-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yanqunchao/Documents/GitHub/BaiTan/BaiTan/Configure/BaiTan-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

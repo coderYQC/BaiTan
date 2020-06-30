@@ -41,8 +41,6 @@
 	<string>App需要您的同意,才能添加照片，以便上传头像或其他资源</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>App需要您的同意,才能访问您的相册，以便上传头像或其他资源</string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

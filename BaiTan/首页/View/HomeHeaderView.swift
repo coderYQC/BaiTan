@@ -40,7 +40,7 @@ class HomeHeaderView: UIView {
     }()
     
     lazy var addressBtn:UIButton = {
-        let addressBtn = UIButton(frame:CGRect(x: 0, y: 0, width: 100, height: kLocationViewH)).titleColor(Constants.k33Color).textFont(UIFont.systemFont(ofSize: 16, weight: .medium)).image(UIImage(named: "home_nav_arrow")!.qc_imageChangeColor(color: Constants.k33Color)).title("获取定位中...")
+        let addressBtn = UIButton(frame:CGRect(x: 0, y: 0, width: 100, height: kLocationViewH)).titleColor(.black).textFont(UIFont.systemFont(ofSize: 16, weight: .medium)).image(UIImage(named: "home_nav_arrow")!.qc_imageChangeColor(color:.black)).title("获取定位中...")
             .layoutButton(.right, 3, true).addAction { (_) in
                 print("点击了定位按钮")
         }
@@ -91,7 +91,6 @@ class HomeHeaderView: UIView {
             .addAction {[weak self] (btn) in
                 self?.setCurSelBtn(index: i)
             }
-         
             self.titleBtnArr.append(btn)
             headerView.addSubview(btn)
             if i == 0 {
@@ -161,7 +160,7 @@ class HomeHeaderView: UIView {
         bannerView.time = 4
         bannerView.placeholderImage = UIImage(named: "default")
         bannerView.imageClickBlock = {[weak self] index in
-            
+            UtilTool.pushViewController(vc: TestViewController())
             bannerView.stopTimer()
         }
         return bannerView

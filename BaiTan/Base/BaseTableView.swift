@@ -18,6 +18,7 @@ class BaseTableView: UITableView,UIGestureRecognizerDelegate{
 
 
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        print(self)
         if isChooseFood  {
             if point.y < kGoodsSelectionTableHeaderViewH - kGoodsSelectionSegmentH{
                 return nil

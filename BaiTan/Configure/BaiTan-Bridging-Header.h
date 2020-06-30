@@ -76,7 +76,7 @@
 #import "MJRefresh.h"
 #import "CustomGifHeader.h"
 #import "XRCarouselView.h"
-
+#import "UINavigationController+TZPopGesture.h"
 //
 ////播放器相关
 //#import "YGPlayerView.h"
