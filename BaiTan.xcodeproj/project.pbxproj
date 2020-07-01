@@ -61,6 +61,8 @@
 		0680443E24AA07F100918297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0680443D24AA07F100918297 /* Main.storyboard */; };
 		0680443F24AACE7500918297 /* Pods_BaiTan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C51E62A03406DBC10D0BCB /* Pods_BaiTan.framework */; };
 		0680444024AACE7500918297 /* Pods_BaiTan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28C51E62A03406DBC10D0BCB /* Pods_BaiTan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0680444324AB136800918297 /* RecommendSellerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680444124AB136800918297 /* RecommendSellerCell.swift */; };
+		0680444424AB136800918297 /* RecommendSellerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0680444224AB136800918297 /* RecommendSellerCell.xib */; };
 		06B6B1F3248B5A3700AE2A55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B6B1EE248B5A3600AE2A55 /* Constants.swift */; };
 		06B6B1F4248B5A3700AE2A55 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B6B1EF248B5A3600AE2A55 /* Global.swift */; };
 		06B6B1F5248B5A3700AE2A55 /* NotificationConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B6B1F0248B5A3600AE2A55 /* NotificationConst.swift */; };
@@ -253,6 +255,8 @@
 		06618C46248B587400F12D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06618C48248B587400F12D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0680443D24AA07F100918297 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0680444124AB136800918297 /* RecommendSellerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendSellerCell.swift; sourceTree = "<group>"; };
+		0680444224AB136800918297 /* RecommendSellerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendSellerCell.xib; sourceTree = "<group>"; };
 		06B6B1EE248B5A3600AE2A55 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Global/Constants.swift; sourceTree = "<group>"; };
 		06B6B1EF248B5A3600AE2A55 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		06B6B1F0248B5A3600AE2A55 /* NotificationConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationConst.swift; sourceTree = "<group>"; };
@@ -954,6 +958,8 @@
 				06B6B51D248C476100AE2A55 /* BigCornerView.swift */,
 				06B6B51F248C485400AE2A55 /* NearbyDynamicsHeaderView.swift */,
 				0655429F248F3D7E000CDFA5 /* HomeHeaderView.swift */,
+				0680444124AB136800918297 /* RecommendSellerCell.swift */,
+				0680444224AB136800918297 /* RecommendSellerCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1313,6 +1319,7 @@
 				06B6B53D248C771000AE2A55 /* Loading_7@2x.tiff in Resources */,
 				0642D2AA249784EE000EBD62 /* GoodsSectionHeader.xib in Resources */,
 				0650856A2490C00D00D52AA7 /* NearbyStallOwnerCell.xib in Resources */,
+				0680444424AB136800918297 /* RecommendSellerCell.xib in Resources */,
 				06B6B524248C58C100AE2A55 /* GoodsCell.xib in Resources */,
 				0642D2DC249B5458000EBD62 /* SellerDetailHeaderView.xib in Resources */,
 				0642D2D0249B431A000EBD62 /* EvaluationCell.xib in Resources */,
@@ -1521,6 +1528,7 @@
 				06B6B355248B68C300AE2A55 /* NSBundle+MJRefresh.m in Sources */,
 				06B6B357248B68C300AE2A55 /* MJRefreshBackGifFooter.m in Sources */,
 				06B6B2E7248B5A5800AE2A55 /* TestAlertContentView.swift in Sources */,
+				0680444324AB136800918297 /* RecommendSellerCell.swift in Sources */,
 				06B6B520248C485400AE2A55 /* NearbyDynamicsHeaderView.swift in Sources */,
 				06425C502493892500C7F98B /* CategoryFilterView.swift in Sources */,
 				06B6B2EB248B5A5800AE2A55 /* TYAlertView.m in Sources */,

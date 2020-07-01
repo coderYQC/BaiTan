@@ -68,8 +68,6 @@ class FindGoodsView: SectionCollectionViewCell {
                   self?.collectionView.onlyFooterRefresh().dispose()
               }
     }
-    
-   
      
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import YQCKit
 let kSegmentHeadViewH:CGFloat = 45
 let kInputVH:CGFloat = 60
 let kLocationViewH:CGFloat = 40
@@ -17,15 +18,31 @@ let kRecommendInputWords:[String] = ["太阳镜","凉皮","手持风扇","雨伞
 let kBannerViewH:CGFloat = floor(87 *  (JWidth - 20) / 345)
 let kItemSpace:CGFloat = 6
 let kActivityItemW = (JWidth - 20 - kItemSpace) / 2
-let kActivityItemsViewH = floor(kActivityItemW * 0.68) + 20
-let kRightItemH:CGFloat = floor((kActivityItemsViewH - 20 - kItemSpace) / 2)
 
-let kItemsFrames:[CGRect] = [CGRect(x: 0, y: 0, width: kActivityItemW, height: kActivityItemsViewH - 20),CGRect(x: kActivityItemW + kItemSpace, y: 0, width: kActivityItemW, height: kRightItemH),CGRect(x: kActivityItemW + kItemSpace, y:kItemSpace + kRightItemH, width: kActivityItemW, height: kRightItemH)]
+let kCategoryItemTitles:[String] = ["美食","甜点饮品","超市便利","蔬菜水果","送药上门","美食","甜点饮品","超市便利","蔬菜水果","送药上门","美食","甜点饮品","超市便利","蔬菜水果","送药上门"]
+
+let kHomeCategoryItemH:CGFloat = 70
+
+let kRecommendGoodsItemW:CGFloat = (JWidth - 20 - 20 - 8) / 2
+
+let kRecommendGoodsItemH:CGFloat = kRecommendGoodsItemW * 0.5 + 70
+ 
+
+let kHomeCategoryItemRowNum:CGFloat = ceil(CGFloat(kCategoryItemTitles.count) / 5)
+ 
+let kActivityItemsViewH:CGFloat = 20 + (kHomeCategoryItemH) * kHomeCategoryItemRowNum + kBtnVSpace * (kHomeCategoryItemRowNum - 1)
+  
+let kRecommendGoodsViewH:CGFloat = (kRecommendGoodsItemH) * 3 + 45
+
+//    floor(kActivityItemW * 0.68) + 20
+//let kRightItemH:CGFloat = floor((kActivityItemsViewH - 20 - kItemSpace) / 2)
+
+//let kItemsFrames:[CGRect] = [CGRect(x: 0, y: 0, width: kActivityItemW, height: kActivityItemsViewH - 20),CGRect(x: kActivityItemW + kItemSpace, y: 0, width: kActivityItemW, height: kRightItemH),CGRect(x: kActivityItemW + kItemSpace, y:kItemSpace + kRightItemH, width: kActivityItemW, height: kRightItemH)]
 
 let kItemImgs:[String] = ["itemLeft","itemRightTop","itemRightBottom"]
  
 let kSegmentTitleArr = ["发现好货","附近摊主"]
-      
+
 class HomeHeaderView: UIView {
  
     var titleBtnArr = [UIButton]()
@@ -148,7 +165,9 @@ class HomeHeaderView: UIView {
             btnMaxX = btn.right + space
         }
         return view
-    }()  
+    }()
+    
+     
     var bannerImages:[String] = [] {
         didSet{
             self.bannerView.imageArray = bannerImages
@@ -167,11 +186,44 @@ class HomeHeaderView: UIView {
     }()
     
     lazy var activityItemsView:UIView = {
-        let view = UIView(frame: CGRect(x: 10, y: self.bannerView.bottom + 10, width: JWidth - 20, height: kActivityItemsViewH - 20))
-        for (i,frame) in kItemsFrames.enumerated() {
-            let iv = UIImageView(frame: frame).image(kItemImgs[i]).contentMode(.scaleAspectFill) .cornerRadiusWithClip(10)
-            view.addSubview(iv)
+        let view = UIView(frame: CGRect(x: 10, y: self.bannerView.bottom + 10, width: JWidth - 20, height: kActivityItemsViewH)).cornerRadiusWithClip(10).backgroundColor(.white)
+        
+        let kBtnW:CGFloat = (view.width - kBtnHSpace * 4 - kMargin * 2) / 5
+        
+        for (i,title) in kCategoryItemTitles.enumerated() {
+            let imgNum = i > 9 ? i - 10 : i
+            let row:CGFloat = floor(CGFloat(i) / 5)
+            let col:CGFloat = floor(CGFloat(i % 5))
+            let btn = UIButton()
+                .frame(kMargin + col * (kBtnHSpace + kBtnW),10 +  (kBtnVSpace + kHomeCategoryItemH) * row, kBtnW, kHomeCategoryItemH)
+                .title(title)
+                .textFont(12)
+                .showsTouchWhenHighlighted(false)
+                .image("icon_home_category_code_\(1+imgNum)")
+                .titleColor(Constants.k33Color)
+                .layoutButton(.top, 8)
+                .addAction { (btn) in
+                    
+            }
+            view.addSubview(btn)
         }
+         
+//        for (i,frame) in kItemsFrames.enumerated() {
+//            let iv = UIImageView(frame: frame).image(kItemImgs[i]).contentMode(.scaleAspectFill) .cornerRadiusWithClip(10)
+//            view.addSubview(iv)
+//        }
+        return view
+    }()
+    
+    lazy var recommendGoodsView:UIView = {
+            let view = UIView(frame: CGRect(x: 10, y: self.activityItemsView.bottom + 10, width: JWidth - 20, height: kRecommendGoodsViewH)).cornerRadiusWithClip(10).backgroundColor(.white)
+            
+        let titleLab = UILabel(frame: CGRect(x: 10, y: 0, width: view.width - 20, height: 45)).text("下午茶好店").font(UIFont.systemFont(ofSize: 22, weight: .light)).textAlignment(.left).textColor(Constants.kGoldenColor).superView(view)
+        let collectionView = QCCollectionView(frame: CGRect(x: 0, y: titleLab.bottom, width: view.width, height: kRecommendGoodsItemH * 3), cellCls: RecommendSellerCell.self)
+            .layout(sectionInset: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10), itemSize: CGSize(width: kRecommendGoodsItemW, height: kRecommendGoodsItemH), minimumLineSpacing: 0, minimumInteritemSpacing: 8)
+            .defaultData(["","","","","",""]).backgroundColor(.white)
+         
+        view.addSubview(collectionView)
         return view
     }()
     
@@ -182,7 +234,10 @@ class HomeHeaderView: UIView {
         self.addSubview(self.locationView)
         self.addSubview(self.recommendSearchView)
         self.addSubview(self.bannerView)
+        
         self.addSubview(self.activityItemsView)
+        self.addSubview(self.recommendGoodsView)
+        
         self.addSubview(self.locationCover)
         self.addSubview(self.inputV)
         self.inputV.addSubview(marqueeView)

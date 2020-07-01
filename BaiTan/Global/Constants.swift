@@ -9,7 +9,7 @@
 import UIKit
 import ESTabBarController_swift
 
-let kAPP_BG_RGB_VAL:CGFloat = 248
+let kAPP_BG_RGB_VAL:CGFloat = 242
 
 class Constants: NSObject {
      
@@ -21,8 +21,9 @@ class Constants: NSObject {
         static let APP_MAIN_COLOR = UIColor.rgb(r: 250, g: 200, b: 60)
         //【偏向浅蓝色】
         static let kLightBlueColor = UIColor.colorFromRGB(0xE7F2FF)
+   
     static let APP_BACKGROUND_COLOR = UIColor.init(red: kAPP_BG_RGB_VAL / 255.0, green: kAPP_BG_RGB_VAL / 255.0, blue: kAPP_BG_RGB_VAL / 255.0, alpha: 1)
-        static let kBtnDisableColor = UIColor.colorFromRGB(0xF2F2F2)
+        static let kBtnDisableColor = UIColor.colorFromRGB(0xE6E6E6)
         static let kOrangeColor = UIColor.colorFromRGB(0xFFAC29)
         
         //------------------灰色系----------------/

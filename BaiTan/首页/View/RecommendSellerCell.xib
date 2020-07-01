@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecommendSellerCell" id="gTV-IL-0wX" customClass="RecommendSellerCell" customModule="BaiTan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="235" height="175"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="235" height="175"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recommendSellerIcon" translatesAutoresizingMaskIntoConstraints="NO" id="a2h-ub-S5p">
+                        <rect key="frame" x="0.0" y="0.0" width="235" height="117.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="a2h-ub-S5p" secondAttribute="height" multiplier="2" id="N6Q-Tx-coe"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="吉姆大师傅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYG-Ng-lBF">
+                        <rect key="frame" x="0.0" y="125.5" width="235" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <color key="textColor" red="0.031372549020000001" green="0.12941176469999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近期399人好评" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sO4-H6-gaE">
+                        <rect key="frame" x="0.0" y="147.5" width="235" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.70980392156862748" green="0.62352941176470589" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="a2h-ub-S5p" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Byq-0u-PI8"/>
+                <constraint firstItem="sO4-H6-gaE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Epo-eQ-AI2"/>
+                <constraint firstItem="yYG-Ng-lBF" firstAttribute="top" secondItem="a2h-ub-S5p" secondAttribute="bottom" constant="8" id="HWd-ke-TLz"/>
+                <constraint firstAttribute="trailing" secondItem="sO4-H6-gaE" secondAttribute="trailing" id="SV7-dB-Vtq"/>
+                <constraint firstAttribute="trailing" secondItem="yYG-Ng-lBF" secondAttribute="trailing" id="TmP-pO-1HS"/>
+                <constraint firstItem="sO4-H6-gaE" firstAttribute="top" secondItem="yYG-Ng-lBF" secondAttribute="bottom" constant="4" id="Vb2-BQ-lMK"/>
+                <constraint firstItem="a2h-ub-S5p" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lRe-WX-ICi"/>
+                <constraint firstAttribute="trailing" secondItem="a2h-ub-S5p" secondAttribute="trailing" id="xLh-Sv-9fj"/>
+                <constraint firstItem="yYG-Ng-lBF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xze-9G-aIX"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="235" height="175"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="descLab" destination="sO4-H6-gaE" id="t4S-W1-Rre"/>
+                <outlet property="iconView" destination="a2h-ub-S5p" id="mre-Hj-TtQ"/>
+                <outlet property="nameLab" destination="yYG-Ng-lBF" id="Y6B-vn-blg"/>
+            </connections>
+            <point key="canvasLocation" x="281.8840579710145" y="167.74553571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="recommendSellerIcon" width="322" height="178"/>
+    </resources>
+</document>

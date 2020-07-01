@@ -12,7 +12,7 @@ import UIKit
 import SwiftyJSON
 class MarqueeView: UIView,JJMarqueeViewDelegate,JJMarqueeViewDataSource {
     
-    let marqueeView = JJMarqueeView.init(frame: CGRect.init(x: 0, y: 0, width: JWidth - 40, height: 36))
+    let marqueeView = JJMarqueeView.init(frame: CGRect.init(x: 40, y: 0, width: JWidth - 80, height: 36))
     
     override func awakeFromNib() {
         super.awakeFromNib()

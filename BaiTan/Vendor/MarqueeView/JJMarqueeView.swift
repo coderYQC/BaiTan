@@ -72,14 +72,14 @@ class JJMarqueeView: UIView {
     
     func setUpUI() -> Void {
         
-        marqueeOneLab.font = UIFont.systemFont(ofSize: 15)
-        marqueeTwoLab.font = UIFont.systemFont(ofSize: 15)
+        marqueeOneLab.font = UIFont.systemFont(ofSize: 13)
+        marqueeTwoLab.font = UIFont.systemFont(ofSize: 13)
         
         marqueeOneLab.textColor = Constants.k96Color
         marqueeTwoLab.textColor = Constants.k96Color
         
-        marqueeOneLab.textAlignment = .center
-        marqueeTwoLab.textAlignment = .center
+        marqueeOneLab.textAlignment = .left
+        marqueeTwoLab.textAlignment = .left
         
         self.addSubview(marqueeOneLab)
         self.addSubview(marqueeTwoLab)

@@ -18,7 +18,7 @@ let kContentCellHeight = kTableViewHeight - kInputVH - kSegmentHeadViewH - Const
 
  
 
-let kOtherViewH:CGFloat = kBannerViewH + kActivityItemsViewH
+let kOtherViewH:CGFloat = kBannerViewH + kActivityItemsViewH + 30 + kRecommendGoodsViewH
 
 let kHeaderViewH:CGFloat = Constants.statusBarHeight + kLocationViewH + kInputVH + kSegmentHeadViewH + kRecommendSearchViewH + kOtherViewH
 
@@ -193,8 +193,7 @@ class HomeViewController: BaseViewController {
         self.myTableView.tableHeaderView = self.headerView
         self.myTableView.collectionView = self.collectionView1
         self.navigationItem.title = "首页"
-        
-        
+         
         self.filterBestView.backgroundColor = .white
         self.filterVelocityView.backgroundColor = .white
         self.categoryFilterView.backgroundColor = .white
